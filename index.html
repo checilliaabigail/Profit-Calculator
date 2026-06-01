@@ -805,8 +805,7 @@
             const profitKotor = danaDicairkan - totalCOGS;
             document.getElementById('profitKotor').innerText = formatRupiah(profitKotor);
             
-            // BIAYA IKLAN dari ROAS            
-            let biayaIklan = 0;
+            // BIAYA IKLAN dari ROAS            let biayaIklan = 0;
             if (roas > 0) {
                 biayaIklan = (1 / roas) * hargaNett;
             }
@@ -828,20 +827,7 @@
             document.getElementById('pajak').innerText = formatRupiah(pajak);
             
             // PROFIT BERSIH
-
-            console.log("=== DEBUG PROFIT ===");
-            console.log("hargaNett:", hargaNett);
-            console.log("totalBiayaShopee:", totalBiayaShopee);
-            console.log("danaDicairkan:", danaDicairkan);
-            console.log("totalCOGS:", totalCOGS);
-            console.log("profitKotor:", profitKotor);
-            console.log("totalPengeluaran:", totalPengeluaran);
-            console.log("profitSebelumPajak:", profitSebelumPajak);
-            console.log("pajak:", pajak);
-
             const profitBersih = profitSebelumPajak - pajak;
-            
-            console.log("profitBersih:", profitBersih);
             const profitBersihEl = document.getElementById('profitBersih');
             const profitBersihBox = document.getElementById('profitBersihBox');
             
