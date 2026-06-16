@@ -1,1 +1,200 @@
-
+[
+  {
+    "id": 1,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Aksesoris Rambut",
+    "jenisProduk": [
+      "Bando & Bandana",
+      "Ikat Rambut",
+      "Pita & Scrunchie",
+      "Jepitan & Pin Rambut",
+      "Rambut Palsu & Extension",
+      "Hiasan Kepala",
+      "Tiara & Mahkota Bunga",
+      "Aksesoris Rambut Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 2,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Aksesoris Tambahan",
+    "jenisProduk": [
+      "Bros & Pin",
+      "Bordir",
+      "Liontin",
+      "Kancing Manset",
+      "Tato Temporer",
+      "Sapu Tangan",
+      "Aksesoris Tambahan Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 3,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Anting",
+    "jenisProduk": [
+      "Anting"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 4,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Cincin",
+    "jenisProduk": [
+      "Masker"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 5,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Dasi",
+    "jenisProduk": [
+      "Dasi"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 6,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Gelang Kaki",
+    "jenisProduk": [
+      "Gelang Kaki"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 7,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Gelang Tangan & Bangle",
+    "jenisProduk": [
+      "Gelang Tangan & Bangle"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 8,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Ikat Pinggang",
+    "jenisProduk": [
+      "Ikat Pinggang"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 9,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Kacamata & Aksesoris",
+    "jenisProduk": [
+      "Kacamata Hitam",
+      "Frame & Lensa Kacamata",
+      "Tempat Kacamata & Aksesoris",
+      "Aksesoris Kacamata Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 10,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Kalung",
+    "jenisProduk": [
+      "Kalung"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 11,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Sarung Tangan",
+    "jenisProduk": [
+      "Sarung Tangan"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 12,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Set & Paket Aksesoris",
+    "jenisProduk": [
+      "Set & Paket Aksesoris"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 13,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Syal & Selendang",
+    "jenisProduk": [
+      "Syal & Selendang"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 14,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Topi",
+    "jenisProduk": [
+      "Topi"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 15,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Aksesoris Tambahan",
+    "jenisProduk": [
+      "Masker"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 16,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Logam Mulia",
+    "jenisProduk": [
+      "Platinum & Emas",
+      "Perak",
+      "Berlian",
+      "Permata",
+      "Logam Mulia Lainnya"
+    ],
+    "adminFee": 4.25
+  },
+  {
+    "id": 17,
+    "kategoriUtama": "Fashion",
+    "kategori": "Aksesoris Fashion",
+    "subKategori": "Perhiasan Berharga",
+    "jenisProduk": [
+      "Kalung",
+      "Gelang Tangan",
+      "Cincin",
+      "Anting",
+      "Gelang Kaki",
+      "Liontin",
+      "Bros & Pin",
+      "Set Perhiasan",
+      "Perhiasan Berharga Lainnya"
+    ],
+    "adminFee": 4.25
+  },
+]
