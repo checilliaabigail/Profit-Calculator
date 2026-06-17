@@ -1068,4 +1068,96 @@
     ],
     "adminFee": 8.25
   },
+  {
+    "id": 82,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Aksesoris & Perawatan Sepatu",
+    "jenisProduk": [
+      "Alat Perawatan & Pembersih Sepatu", 
+      "Parfum Sepatu",
+      "Shoe Tree & Horns",
+      "Insole Sepatu",
+      "Aksesoris & Perawatan Sepatu Lainnya", 
+      "Tali Sepatu"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 83,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Boot",
+    "jenisProduk": [
+      "Boot Fashion",
+      "Sepatu Boot Hujan",
+      "Safety Boot",
+      "Boot Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 84,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Loafer",
+    "jenisProduk": [
+      "Loafer"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 85,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Oxford",
+    "jenisProduk": [
+      "Oxford"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 86,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Sandal",
+    "jenisProduk": [
+      "Sandal Jepit",
+      "Sandal Slide",
+      "Sandal Rumah",
+      "Sandal Kesehatan",
+      "Sandal Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 87,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Slip-On & Mules",
+    "jenisProduk": [
+      "Slip-On & Mules"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 88,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Sneakers",
+    "jenisProduk": [
+      "Sneakers"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 89,
+    "kategoriUtama": "Fashion",
+    "kategori": "Sepatu Pria",
+    "subKategori": "Sepatu Pria Lainnya",
+    "jenisProduk": [
+      "Sepatu Pria Lainnya"
+    ],
+    "adminFee": 9.00
+  },
 ]
