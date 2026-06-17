@@ -408,7 +408,7 @@
       "Baju Olahraga Muslim", 
       "Baju Renang Muslim"
     ],
-    "adminFee": 10.00
+    "adminFee": 8.25
   },
   {
     "id": 30,
@@ -422,7 +422,152 @@
       "Cardigan",
       "Outerwear Lainnya"
     ],
-    "adminFee": 10.00
+    "adminFee": 8.25
   },
-  
+  {
+    "id": 31,
+    "kategoriUtama": "Fashion",
+    "kategori": "Fashion Muslim",
+    "subKategori": "Pakaian Muslim Anak",
+    "jenisProduk": [
+      "Mukena",
+      "Hijab",
+      "Pakaian & Set Muslim",
+      "Pakaian Muslim Anak Perempuan Lainnya",
+      "Pakaian Muslim Anak Laki-Laki",
+      "Pakaian Muslim Anak Lainnya"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 32,
+    "kategoriUtama": "Fashion",
+    "kategori": "Fashion Muslim",
+    "subKategori": "Pakaian Muslim Pria",
+    "jenisProduk": [
+      "Atasan",
+      "Gamis Pria",
+      "Celana",
+      "Sarung",
+      "Baju Melayu",
+      "Pakaian Muslim Pria Lainnya"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 33,
+    "kategoriUtama": "Fashion",
+    "kategori": "Fashion Muslim",
+    "subKategori": "Pakaian Muslim Wanita",
+    "jenisProduk": [
+      "Khimar",
+      "Hijab Instan",
+      "Hijab Segi Empat",
+      "Pashmina",
+      "Ciput",
+      "Pin Hijab",
+      "Hijab Lainnya",
+      "Aksesoris Hijab Lainnya",
+      "Kaos Kaki",
+      "Handsock", 
+      "Aksesoris Lainnya", 
+      "Tunik", 
+      "Kemeja", 
+      "Blus", 
+      "& Inner",
+      "Atasan Menyusui",
+      "Atasan Muslim Lainnya",
+      "Gamis",
+      "Abaya",
+      "Dress Menyusui",
+      "Kaftan",
+      "Baju Kelelawar",
+      "Baju Kurung",
+      "Set Baju Muslim",
+      "Jumpsuit", 
+      "Dress Lainnya", 
+      "Rok", 
+      "Celana Panjang", 
+      "Legging", 
+      "Celana Palazzo",
+      "Bawahan Lainnya", 
+      "Pakaian Muslim Wanita Lainnya"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 34,
+    "kategoriUtama": "Fashion",
+    "kategori": "Fashion Muslim",
+    "subKategori": "Set",
+    "jenisProduk": [
+      "Set"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 35,
+    "kategoriUtama": "Fashion",
+    "kategori": "Fashion Muslim",
+    "subKategori": "Fashion Muslim Lainnya",
+    "jenisProduk": [
+      "Fashion Muslim Lainnya"
+    ],
+    "adminFee": 8.25
+  },
+  {
+    "id": 36,
+    "kategoriUtama": "Fashion",
+    "kategori": "Jam Tangan",
+    "subKategori": "Aksesoris Jam Tangan",
+    "jenisProduk": [
+      "Strap", 
+      "Alat Servis Jam Tangan", 
+      "Pengait Jam Tangan", 
+      "Baterai Jam Tangan", 
+      "Kotak Jam Tangan", 
+      "Aksesoris Jam Tangan lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 37,
+    "kategoriUtama": "Fashion",
+    "kategori": "Jam Tangan",
+    "subKategori": "Jam Tangan Couple",
+    "jenisProduk": [
+      "Jam Tangan Couple"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 38,
+    "kategoriUtama": "Fashion",
+    "kategori": "Jam Tangan",
+    "subKategori": "Jam Tangan Pria",
+    "jenisProduk": [
+      "Jam Tangan Pria"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 39,
+    "kategoriUtama": "Fashion",
+    "kategori": "Jam Tangan",
+    "subKategori": "Jam Tangan Wanita",
+    "jenisProduk": [
+      "Jam Tangan Wanita"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 40,
+    "kategoriUtama": "Fashion",
+    "kategori": "Jam Tangan",
+    "subKategori": "Jam Tangan Lainnya",
+    "jenisProduk": [
+      "Jam Tangan Lainnya"
+    ],
+    "adminFee": 9.00
+  },
 ]
