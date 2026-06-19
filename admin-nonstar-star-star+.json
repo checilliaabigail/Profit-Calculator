@@ -2855,4 +2855,511 @@
     ],
     "adminFee": 10.00
   },
+  {
+    "id": 205,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Aksesoris Kamera",
+    "jenisProduk": [
+      "Lighting & Perlengkapan Studio Foto",
+      "Roll Film & Kertas Foto",
+      "Printer Foto",
+      "Charger Baterai",
+      "Baterai & Battery Grip",
+      "Tripod, Monopod, & Aksesoris",
+      "Aksesoris Kamera Lainnya",
+      "Gimbal & Stabilizer"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 206,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Kamera Keamanan",
+    "jenisProduk": [
+      "Kamera CCTV",
+      "DVR",
+      "Kamera Dummy",
+      "Kamera Pengintai",
+      "Kamera Keamanan Lainnya"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 207,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Perawatan Kamera",
+    "jenisProduk": [
+      "Dry Box & Cabinet",
+      "Cleaning Kit",
+      "Silica Gel",
+      "Blower",
+      "Lenspen & Brush",
+      "Perawatan Kamera Lainnya"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 208,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Aksesoris Drone",
+    "jenisProduk": [
+      "Aksesoris Drone"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 209,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Aksesoris Kamera",
+    "jenisProduk": [
+      "Flash", 
+      "Flash Trigger",
+      "Flash Diffuser",
+      "Aksesoris Flash Lainnya",
+      "Tas & Casing Kamera"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 210,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Aksesoris Lensa",
+    "jenisProduk": [
+      "Mount & Adaptor Lensa",
+      "Cap Lensa",
+      "Filter Lensa",
+      "Hood Lensa",
+      "Aksesoris Lensa Lainnya"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 211,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Drone",
+    "jenisProduk": [
+      "Drone"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 212,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Kamera",
+    "jenisProduk": [
+      "Kamera Pocket",
+      "Kamera Mirrorless",
+      "Kamera Action",
+      "Camcorder",
+      "Kamera Instan",
+      "Kamera Analog",
+      "DSLR",
+      "Kamera Lainnya"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 213,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Lensa",
+    "jenisProduk": [
+      "Lensa"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 214,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Kamera & Drone",
+    "subKategori": "Kamera & Drone Lainnya",
+    "jenisProduk": [
+      "Kamera & Drone Lainnya"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 215,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Aksesoris Desktop & Laptop",
+    "jenisProduk": [
+      "USB HUB & Card Reader",
+      "Webcam",
+      "Pelindung Laptop & Skin Laptop",
+      "Cooling Pad",
+      "Meja & Stand Laptop",
+      "Pelindung Keyboard & Trackpad",
+      "Baterai Laptop",
+      "Charger & Adaptor Laptop",
+      "Perangkat Video Conference",
+      "Aksesoris Desktop & Laptop Lainnya",
+      "Mouse Pad"
+    ],
+    "adminFee": 6.75
+  },
+  {
+    "id": 216,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Keyboard & Mouse",
+    "jenisProduk": [
+      "Mouse",
+      "Keyboard",
+      "Drawing Tablet",
+      "Keyboard & Mouse Lainnya"
+    ],
+    "adminFee": 6.75
+  },
+  {
+    "id": 217,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Komponen Network",
+    "jenisProduk": [
+      "Modem & Router Wireless",
+      "Repeater",
+      "Wireless Adapter & Kartu Network",
+      "Powerline Adapter",
+      "Switch Internet & PoE",
+      "Kabel Network & Konektor",
+      "KVM Switch",
+      "Print Server",
+      "Komponen Network Lainnya"
+    ],
+    "adminFee": 6.75
+  },
+  {
+    "id": 218,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Software",
+    "jenisProduk": [
+      "Software"
+    ],
+    "adminFee": 6.75
+  },
+  {
+    "id": 219,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Komponen Desktop & Laptop",
+    "jenisProduk": [
+      "Sound Card"
+    ],
+    "adminFee": 6.50
+  },
+  {
+    "id": 220,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Desktop",
+    "jenisProduk": [
+      "PC Desktop",
+      "PC Mini",
+      "Server PC",
+      "All-in-One Desktop",
+      "Desktop Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 221,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Komponen Desktop & Laptop",
+    "jenisProduk": [
+      "Fan & Heatsink",
+      "Processor",
+      "Motherboard",
+      "VGA Card",
+      "Thermal Paste",
+      "Power Supply",
+      "Memory RAM",
+      "UPS & Stabilizer",
+      "Casing Komputer",
+      "Optical Drive",
+      "Komponen Desktop & Laptop Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 222,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Laptop",
+    "jenisProduk": [
+      "Laptop"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 223,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Monitor",
+    "jenisProduk": [
+      "Monitor"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 224,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Penyimpanan Data",
+    "jenisProduk": [
+      "SSD",
+      "Hard Disk",
+      "Network Attached Storage (NAS)",
+      "Flashdisk & Flashdisk OTG",
+      "Casing Hard Disk & Docking",
+      "Compact Disc (CD)",
+      "Penyimpanan Data Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 225,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Peralatan Kantor",
+    "jenisProduk": [
+      "Mesin Ketik",
+      "Mesin Absensi",
+      "Penghancur Kertas",
+      "Penghitung Uang",
+      "Peralatan Kantor Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 226,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Printer & Scanner",
+    "jenisProduk": [
+      "Printer",
+      "Scanner & Mesin Fotokopi",
+      "Printer Thermal & Barcode",
+      "Tinta Printer",
+      "3D Printer",
+      "Printer & Scanner Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 227,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Komputer & Aksesoris",
+    "subKategori": "Komputer & Aksesoris Lainnya",
+    "jenisProduk": [
+      "Komputer & Aksesoris Lainnya"
+    ],
+    "adminFee": 5.25
+  },
+  {
+    "id": 228,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Perlengkapan Menggambar",
+    "jenisProduk": [
+      "Pensil Warna",
+      "Krayon & Pastel",
+      "Cat Air & Cat Poster",
+      "Cat Minyak",
+      "Cat Akrilik",
+      "Kuas Lukis",
+      "Palet Lukis",
+      "Kanvas Lukis & Easel",
+      "Buku Gambar & Sketsa",
+      "Perlengkapan Menggambar Lainnya"
+    ],
+    "adminFee": 10.00
+  },
+  {
+    "id": 229,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Pembungkus Kado & Kemasan",
+    "jenisProduk": [
+      "Bubble Wrap"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 230,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Perlengkapan Sekolah & Kantor",
+    "jenisProduk": [
+      "Kalkulator",
+      "Pisau Ukir & Cutter",
+      "Tali & Selotip",
+      "Lem",
+      "Printer Label",
+      "Lanyard & Name Tag",
+      "Klip Kertas, Push Pin, & Paku Payung",
+      "Pembolong Kertas",
+      "Gunting",
+      "Stempel & Bak Stempel",
+      "Stapler & Staples",
+      "Kalender",
+      "Folder, Organizer Kertas, & Aksesoris"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 231,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Alat Tulis",
+    "jenisProduk": [
+      "Pulpen & Tinta",
+      "Pensil",
+      "Penghapus & Tipe X",
+      "Spidol",
+      "Highlighter",
+      "Alat Tulis Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 232,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Buku Tulis & Kertas",
+    "jenisProduk": [
+      "Pembatas Buku",
+      "Sampul Buku",
+      "Kertas Termal & Continuous Paper",
+      "Kertas Print & Fotocopy",
+      "Kertas Binder",
+      "Memo & Sticky Notes",
+      "Art Paper & Art Board",
+      "Notebook & Notepad",
+      "Label & Stiker",
+      "Buku Tulis & Kertas Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 233,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Pembungkus Kado & Kemasan",
+    "jenisProduk": [
+      "Kertas Kado",
+      "Kotak Kado",
+      "Tas Kado",
+      "Pita Kado",
+      "Kardus",
+      "Bungkus Kado Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 234,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Perlengkapan Sekolah & Kantor",
+    "jenisProduk": [
+      "Papan Tulis & Papan Jalan",
+      "Penggaris, Busur Derajat, & Stensil",
+      "Rautan",
+      "Tempat Pensil",
+      "Perlengkapan Sekolah & Kantor Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 235,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Surat-Menyurat",
+    "jenisProduk": [
+      "Amplop & Angpau",
+      "Kartu Pos",
+      "Materai & Perangko",
+      "Surat-Menyurat Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 236,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Buku & Alat Tulis Lainnya",
+    "jenisProduk": [
+      "Buku & Alat Tulis Lainnya"
+    ],
+    "adminFee": 10.00
+  },
+  {
+    "id": 237,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Majalah & Koran",
+    "jenisProduk": [
+      "Bisnis",
+      "Gaya Hidup",
+      "Remaja",
+      "Majalah & Koran Lainnya"
+    ],
+    "adminFee": 10.00
+  },
+  {
+    "id": 238,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Buku Bacaan",
+    "jenisProduk": [
+      "Komik",
+      "Buku Audio",
+      "Buku Bacaan Lainnya"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 239,
+    "kategoriUtama": "Lifestyle",
+    "kategori": "Buku & Alat Tulis",
+    "subKategori": "Buku Bacaan",
+    "jenisProduk": [
+      "Buku Anak-Anak",
+      "Stiker & Buku Mewarnai",
+      "Pertanian, Kehutanan, & Perikanan",
+      "Kamus",
+      "Sains & Matematika",
+      "Kedokteran",
+      "Pendidikan",
+      "Seni, Desain, & Fotografi",
+      "Hobi",
+      "Musik",
+      "Buku Resep & Masak",
+      "Kesehatan, Kebugaran, & Diet",
+      "Wisata & Turisme",
+      "Parenting & Keluarga",
+      "Politik, Hukum, & Ilmu Sosial",
+      "Biografi & Memoar",
+      "Sejarah & Budaya",
+      "Agama & Filsafat",
+      "Psikologi & Hubungan",
+      "Pengembangan Diri & Karir",
+      "Bisnis & Investasi",
+      "Komputer & Teknologi",
+      "Literatur Klasik",
+      "Fantasi, Action, Crime, & Thrillers",
+      "Romansa"
+    ],
+    "adminFee": 9.00
+  },
 ]
