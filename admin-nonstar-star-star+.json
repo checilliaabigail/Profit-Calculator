@@ -2376,4 +2376,128 @@
     ],
     "adminFee": 8.25
   },
+  {
+    "id": 169,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Media Player",
+    "jenisProduk": [
+      "MP3 & MP4 Player",
+      "CD, DVD, & Blu-ray Player",
+      "Voice Recorders",
+      "Radio & Pemutar Kaset",
+      "Media Player Lainnya"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 170,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Amplifier & Mixer",
+    "jenisProduk": [
+      "Amplifier & Mixer"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 171,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Kabel & Konverter Audio & Video",
+    "jenisProduk": [
+      "Kabel & Konverter Audio & Video"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 172,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Mikrofon & Aksesoris",
+    "jenisProduk": [
+      "Mikrofon & Aksesoris"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 173,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Perangkat Audio & Speaker",
+    "jenisProduk": [
+      "Speaker",
+      "Home Theater & Karaoke",
+      "AV Receiver",
+      "Perangkat Audio & Speaker Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 174,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Earphone, Headphone, & Headset",
+    "jenisProduk": [
+      "Earphone, Headphone, & Headset"
+    ],
+    "adminFee": 6.75
+  },
+  {
+    "id": 175,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Audio",
+    "subKategori": "Audio Lainnya",
+    "jenisProduk": [
+      "Audio Lainnya"
+    ],
+    "adminFee": 9.00
+  },
+  {
+    "id": 176,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Elektronik",
+    "subKategori": "Kelistrikan",
+    "jenisProduk": [
+      "Stop Kontak & Sambungan Kabel",
+      "Pengaman Stop Kontak",
+      "Penghemat Listrik",
+      "Bel",
+      "Saklar",
+      "Alarm",
+      "Anti Petir",
+      "Kelistrikan Lainnya"
+    ],
+    "adminFee": 10.00
+  },
+  {
+    "id": 177,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Elektronik",
+    "subKategori": "Baterai",
+    "jenisProduk": [
+      "Baterai"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 178,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Elektronik",
+    "subKategori": "Peralatan Listrik Besar",
+    "jenisProduk": [
+      "Water Heater"
+    ],
+    "adminFee": 9.50
+  },
+  {
+    "id": 179,
+    "kategoriUtama": "Elektronik",
+    "kategori": "Elektronik",
+    "subKategori": "Peralatan Listrik Kecil",
+    "jenisProduk": [
+      "Foot Bath & Spa"
+    ],
+    "adminFee": 9.50
+  },
 ]
