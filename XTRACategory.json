@@ -621,4 +621,1772 @@
       "maxPerQty": 60000
     }
   },
+  {
+    "id": 29,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Mukena & Perlengkapan Sholat",
+    "jenisProduk": [
+      "Mukena",
+      "Mukena & Perlengkapan Sholat Lainnya",
+      "Mukena Travel",
+      "Peci",
+      "Songkok & Kopiah",
+      "Sajadah",
+      "Set Perlengkapan Sholat"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 30,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Outerwear",
+    "jenisProduk": [
+      "Cardigan",
+      "Jaket",
+      "Mantel",
+      "Outerwear Lainnya",
+      "Rompi"
+    ],
+    "regular": null,
+    "special": null
+  },
+  {
+    "id": 31,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Muslim Anak",
+    "jenisProduk": [
+      "Hijab",
+      "Mukena",
+      "Pakaian & Set Muslim",
+      "Pakaian Muslim Anak Lainnya",
+      "Pakaian Muslim Anak Laki-Laki",
+      "Pakaian Muslim Anak Perempuan Lainnya"
+    ],
+    "regular": null,
+    "special": null
+  },
+  {
+    "id": 32,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Muslim Pria",
+    "jenisProduk": [
+      "Atasan",
+      "Baju Melayu",
+      "Celana",
+      "Gamis Pria",
+      "Pakaian Muslim Pria Lainnya",
+      "Sarung"
+    ],
+    "regular": null,
+    "special": null
+  },
+  {
+    "id": 33,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Muslim Wanita",
+    "jenisProduk": [
+      "Abaya",
+      "Aksesoris Hijab Lainnya",
+      "Aksesoris Lainnya",
+      "Atasan Menyusui",
+      "Atasan Muslim Lainnya",
+      "Baju Kelelawar",
+      "Baju Kurung",
+      "Bawahan Lainnya",
+      "Celana Palazzo",
+      "Celana Panjang",
+      "Ciput",
+      "Dress Lainnya",
+      "Dress Menyusui",
+      "Gamis",
+      "Handsock",
+      "Hijab Instan",
+      "Hijab Lainnya",
+      "Hijab Segi Empat",
+      "Jumpsuit",
+      "Kaftan",
+      "Kaos Kaki",
+      "Kemeja, Blus, & Inner",
+      "Khimar",
+      "Legging",
+      "Pakaian Muslim Wanita Lainnya",
+      "Pashmina",
+      "Pin Hijab",
+      "Rok",
+      "Set Baju Muslim",
+      "Tunik"
+    ],
+    "regular": null,
+    "special": null
+  },
+  {
+    "id": 34,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "G",
+    "subKategori": "Set",
+    "jenisProduk": [
+      "Set"
+    ],
+    "regular": null,
+    "special": null
+  },
+  {
+    "id": 35,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim",
+    "kategoriProduk": "H",
+    "subKategori": "Pakaian Muslim Wanita",
+    "jenisProduk": [
+      "Baju Olahraga Muslim",
+      "Baju Renang Muslim"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 36,
+    "kategoriUtama": "Fashion Muslim",
+    "kategori": "Fashion Muslim Lainnya",
+    "kategoriProduk": "G",
+    "subKategori": "Fashion Muslim Lainnya",
+    "jenisProduk": [
+      "Fashion Muslim Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 37,
+    "kategoriUtama": "Jam Tangan",
+    "kategori": "Jam Tangan",
+    "kategoriProduk": "H",
+    "subKategori": "Aksesoris Jam Tangan",
+    "jenisProduk": [
+      "Aksesoris Jam Tangan lainnya",
+      "Alat Servis Jam Tangan",
+      "Baterai Jam Tangan",
+      "Kotak Jam Tangan",
+      "Pengait Jam Tangan",
+      "Strap"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 38,
+    "kategoriUtama": "Jam Tangan",
+    "kategori": "Jam Tangan",
+    "kategoriProduk": "H",
+    "subKategori": "Jam Tangan Couple",
+    "jenisProduk": [
+      "Jam Tangan Couple"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 39,
+    "kategoriUtama": "Jam Tangan",
+    "kategori": "Jam Tangan",
+    "kategoriProduk": "H",
+    "subKategori": "Jam Tangan Pria",
+    "jenisProduk": [
+      "Jam Tangan Pria"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 40,
+    "kategoriUtama": "Jam Tangan",
+    "kategori": "Jam Tangan",
+    "kategoriProduk": "H",
+    "subKategori": "Jam Tangan Wanita",
+    "jenisProduk": [
+      "Jam Tangan Wanita"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 41,
+    "kategoriUtama": "Jam Tangan",
+    "kategori": "Jam Tangan",
+    "kategoriProduk": "H",
+    "subKategori": "Jam Tangan Lainnya",
+    "jenisProduk": [
+      "Jam Tangan Lainnya"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 42,
+    "kategoriUtama": "Koper & Tas Travel",
+    "kategori": "Koper & Tas Travel",
+    "kategoriProduk": "G",
+    "subKategori": "Aksesoris Travel",
+    "jenisProduk": [
+      "Aksesoris Travel Lainnya",
+      "Bantal Leher & Penutup Mata",
+      "Botol & Wadah Isi Ulang",
+      "Gembok Koper",
+      "Organizer Travel",
+      "Passport Cover",
+      "Pelindung & Sarung Koper",
+      "Strap Koper",
+      "Tag Koper",
+      "Timbangan Koper"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 43,
+    "kategoriUtama": "Koper & Tas Travel",
+    "kategori": "Koper & Tas Travel",
+    "kategoriProduk": "G",
+    "subKategori": "Koper",
+    "jenisProduk": [
+      "Koper"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 44,
+    "kategoriUtama": "Koper & Tas Travel",
+    "kategori": "Koper & Tas Travel",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Travel",
+    "jenisProduk": [
+      "Tas Lipat",
+      "Tas Serut",
+      "Tas Travel Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 45,
+    "kategoriUtama": "Koper & Tas Travel",
+    "kategori": "Koper & Tas Travel",
+    "kategoriProduk": "H",
+    "subKategori": "Tas Travel",
+    "jenisProduk": [
+      "Tas Duffel"
+    ],
+    "regular": {
+      "rate": 0.08,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.095,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 46,
+    "kategoriUtama": "Koper & Tas Travel",
+    "kategori": "Koper & Tas Travel Lainnya",
+    "kategoriProduk": "G",
+    "subKategori": "Koper & Tas Travel Lainnya",
+    "jenisProduk": [
+      "Koper & Tas Travel Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 47,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Atasan",
+    "jenisProduk": [
+      "Atasan Lainnya",
+      "Kaos",
+      "Kaos Polo",
+      "Kemeja",
+      "Tanktop"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 48,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Celana Panjang",
+    "jenisProduk": [
+      "Cargo",
+      "Celana Panjang",
+      "Celana Panjang Lainnya",
+      "Jogger"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 49,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Celana Panjang Jeans",
+    "jenisProduk": [
+      "Celana Panjang Jeans"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 50,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Celana Pendek",
+    "jenisProduk": [
+      "Celana Pendek"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 51,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Hoodie & Sweatshirt",
+    "jenisProduk": [
+      "Hoodie",
+      "Hoodie & Sweatshirt Lainnya",
+      "Sweatshirt"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 52,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Jaket, Mantel, & Rompi",
+    "jenisProduk": [
+      "Jaket",
+      "Jaket & Mantel Musim Dingin",
+      "Jaket, Mantel, & Rompi Lainnya",
+      "Rompi"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 53,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Jas Formal",
+    "jenisProduk": [
+      "Celana Formal",
+      "Jas & Blazer Formal",
+      "Jas Formal Lainnya",
+      "Rompi Formal",
+      "Set Jas Formal"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 54,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Kaos Kaki",
+    "jenisProduk": [
+      "Kaos Kaki"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 55,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Kostum",
+    "jenisProduk": [
+      "Kostum"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 56,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Pakaian Dalam",
+    "jenisProduk": [
+      "Celana Dalam",
+      "Kaos Dalam",
+      "Pakaian Dalam Lainnya",
+      "Pakaian Dalam Termal"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 57,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Pakaian Kerja",
+    "jenisProduk": [
+      "Pakaian Kerja"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 58,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Pakaian Tidur",
+    "jenisProduk": [
+      "Pakaian Tidur"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 59,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Pakaian Tradisional",
+    "jenisProduk": [
+      "Atasan Tradisional",
+      "Bawahan Tradisional",
+      "Pakaian Tradisional Lainnya",
+      "Set Pakaian Tradisional"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 60,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Set Pakaian Pria",
+    "jenisProduk": [
+      "Set Pakaian Pria"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 61,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Sweater & Cardigan",
+    "jenisProduk": [
+      "Sweater & Cardigan"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 62,
+    "kategoriUtama": "Pakaian Pria",
+    "kategori": "Pakaian Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Pakaian Pria Lainnya",
+    "jenisProduk": [
+      "Pakaian Pria Lainnya"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 63,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Kaos Kaki & Stocking",
+    "jenisProduk": [
+      "Kaos Kaki",
+      "Kaos Kaki & Stocking Lainnya",
+      "Stocking"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 64,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Atasan",
+    "jenisProduk": [
+      "Atasan Lainnya",
+      "Bodysuit",
+      "Kaos",
+      "Kaus Polo",
+      "Kemben",
+      "Kemeja & Blouse",
+      "Tanktop & Kamisol"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 65,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Baju Hamil",
+    "jenisProduk": [
+      "Atasan Hamil",
+      "Baju Hamil Lainnya",
+      "Baju Menyusui",
+      "Bra Menyusui",
+      "Celana Hamil",
+      "Dress Hamil",
+      "Set Baju Hamil"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 66,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Celana Jeans",
+    "jenisProduk": [
+      "Celana Jeans"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 67,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Celana Panjang & Legging",
+    "jenisProduk": [
+      "Celana Panjang",
+      "Celana Panjang & Legging Lainnya",
+      "Legging & Tregging"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 68,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Celana Pendek",
+    "jenisProduk": [
+      "Celana Pendek",
+      "Celana Pendek Lainnya",
+      "Rok Celana"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 69,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Dress",
+    "jenisProduk": [
+      "Dress"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 70,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Hoodie & Sweatshirt",
+    "jenisProduk": [
+      "Hoodie",
+      "Hoodie & Sweatshirt Lainnya",
+      "Sweatshirt"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 71,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Jaket, Mantel, & Rompi",
+    "jenisProduk": [
+      "Blazer",
+      "Cape",
+      "Jaket",
+      "Jaket & Mantel Musim Dingin",
+      "Jaket, Mantel, & Rompi Lainnya",
+      "Rompi"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 72,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Jumpsuit, Playsuit, & Overall",
+    "jenisProduk": [
+      "Jumpsuit",
+      "Jumpsuit, Playsuit, & Overall Lainnya",
+      "Overall",
+      "Playsuit"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 73,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Kain",
+    "jenisProduk": [
+      "Batik",
+      "Beludru, Sutra, & Satin",
+      "Denim",
+      "Kain Lainnya",
+      "Kanvas",
+      "Katun",
+      "Kebaya",
+      "Kulit",
+      "Songket",
+      "Vinil & Nilon",
+      "Wol"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 74,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Kostum",
+    "jenisProduk": [
+      "Kostum"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 75,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Dalam",
+    "jenisProduk": [
+      "Aksesoris Bra Lainnya",
+      "Bra",
+      "Celana Dalam",
+      "Celana Stretch",
+      "Korset",
+      "Padding",
+      "Pakaian Dalam Lainnya",
+      "Pakaian Dalam Termal",
+      "Set Pakaian Dalam",
+      "Sexy Lingerie",
+      "Stiker Nipple",
+      "Strap"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 76,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Tidur & Piyama",
+    "jenisProduk": [
+      "Daster",
+      "Kimono",
+      "Pakaian Tidur & Piyama Lainnya",
+      "Piyama"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 77,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Tradisional",
+    "jenisProduk": [
+      "Atasan Tradisional",
+      "Bawahan Tradisional",
+      "Dress Tradisional",
+      "Pakaian Tradisional Lainnya",
+      "Set Pakaian Tradisional"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 78,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Rok",
+    "jenisProduk": [
+      "Rok"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 79,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Set",
+    "jenisProduk": [
+      "Set Lainnya",
+      "Set Pakaian Couple",
+      "Set Pakaian Keluarga",
+      "Set Wanita"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 80,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Sweater & Cardigan",
+    "jenisProduk": [
+      "Sweater & Cardigan"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 81,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Wedding Dress",
+    "jenisProduk": [
+      "Wedding Dress"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 82,
+    "kategoriUtama": "Pakaian Wanita",
+    "kategori": "Pakaian Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Pakaian Wanita Lainnya",
+    "jenisProduk": [
+      "Pakaian Wanita Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 83,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Aksesoris & Perawatan Sepatu",
+    "jenisProduk": [
+      "Aksesoris & Perawatan Sepatu Lainnya",
+      "Alat Perawatan & Pembersih Sepatu",
+      "Insole Sepatu",
+      "Parfum Sepatu",
+      "Shoe Tree & Horns",
+      "Tali Sepatu"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 84,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Boot",
+    "jenisProduk": [
+      "Boot Fashion",
+      "Boot Lainnya",
+      "Safety Boot",
+      "Sepatu Boot Hujan"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 85,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Loafer",
+    "jenisProduk": [
+      "Loafer"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 86,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Oxford",
+    "jenisProduk": [
+      "Oxford"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 87,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Sandal",
+    "jenisProduk": [
+      "Sandal Jepit",
+      "Sandal Kesehatan",
+      "Sandal Lainnya",
+      "Sandal Rumah",
+      "Sandal Slide"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 88,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Slip-On & Mules",
+    "jenisProduk": [
+      "Slip-On & Mules"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 89,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Sneakers",
+    "jenisProduk": [
+      "Sneakers"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 90,
+    "kategoriUtama": "Sepatu Pria",
+    "kategori": "Sepatu Pria",
+    "kategoriProduk": "F",
+    "subKategori": "Sepatu Pria Lainnya",
+    "jenisProduk": [
+      "Sepatu Pria Lainnya"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 91,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Aksesoris & Perawatan Sepatu",
+    "jenisProduk": [
+      "Aksesoris & Perawatan Sepatu Lainnya",
+      "Parfum Sepatu",
+      "Perawatan Sepatu",
+      "Shoe Tree & Horns",
+      "Sol Dalam Sepatu",
+      "Tali Sepatu"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 92,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Boots",
+    "jenisProduk": [
+      "Boots Lainnya",
+      "Sepatu Boot Fashion",
+      "Sepatu Boot Hujan"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 93,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Heels",
+    "jenisProduk": [
+      "Heels"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 94,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Sandal Jepit & Sandal Lainnya",
+    "jenisProduk": [
+      "Sandal Flat",
+      "Sandal Jepit",
+      "Sandal Kesehatan",
+      "Sandal Lainnya",
+      "Sandal Rumah"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 95,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Sepatu Flat",
+    "jenisProduk": [
+      "Flat & Ballerina",
+      "Loafer",
+      "Sepatu Flat Lainnya",
+      "Sepatu Oxford",
+      "Slip-On",
+      "Mules & Mary Janes"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 96,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Sneakers",
+    "jenisProduk": [
+      "Sneakers"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 97,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Wedges",
+    "jenisProduk": [
+      "Wedges"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 98,
+    "kategoriUtama": "Sepatu Wanita",
+    "kategori": "Sepatu Wanita",
+    "kategoriProduk": "F",
+    "subKategori": "Sepatu Wanita Lainnya",
+    "jenisProduk": [
+      "Sepatu Wanita Lainnya"
+    ],
+    "regular": {
+      "rate": 0.065,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.08,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 99,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Clutch",
+    "jenisProduk": [
+      "Clutch"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 100,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Dompet",
+    "jenisProduk": [
+      "Dompet Kartu",
+      "Dompet Koin",
+      "Dompet Kunci & Handphone",
+      "Dompet Lainnya",
+      "Dompet Lipat",
+      "Dompet Panjang"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 101,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Ransel Pria",
+    "jenisProduk": [
+      "Ransel Pria"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 102,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Kerja",
+    "jenisProduk": [
+      "Tas Kerja"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 103,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Laptop",
+    "jenisProduk": [
+      "Ransel Laptop",
+      "Sarung Laptop",
+      "Tas & Case Laptop",
+      "Tas Laptop Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 104,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Pinggang Pria",
+    "jenisProduk": [
+      "Tas Pinggang Pria"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 105,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Selempang & Bahu Pria",
+    "jenisProduk": [
+      "Tas Selempang & Bahu Pria"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 106,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tote Bag",
+    "jenisProduk": [
+      "Tote Bag"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 107,
+    "kategoriUtama": "Tas Pria",
+    "kategori": "Tas Pria",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Pria Lainnya",
+    "jenisProduk": [
+      "Tas Pria Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 108,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Aksesoris Tas",
+    "jenisProduk": [
+      "Aksesoris Tas Wanita Lainnya",
+      "Gantungan Tas",
+      "Hiasan & Gantungan Kunci",
+      "Organizer Tas",
+      "Produk Perawatan & Pembersih Tas",
+      "Tali Tas"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 109,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Clutch",
+    "jenisProduk": [
+      "Clutch"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 110,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Dompet Wanita",
+    "jenisProduk": [
+      "Dompet Kartu",
+      "Dompet Koin",
+      "Dompet Kunci & Handphone",
+      "Dompet Lipat",
+      "Dompet Panjang",
+      "Dompet Wanita Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 111,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Ransel Wanita",
+    "jenisProduk": [
+      "Ransel Wanita"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 112,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Laptop",
+    "jenisProduk": [
+      "Ransel Laptop",
+      "Sarung Laptop",
+      "Tas & Case Laptop",
+      "Tas Laptop Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 113,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Pinggang Wanita",
+    "jenisProduk": [
+      "Tas Pinggang Wanita"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 114,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Selempang & Bahu Wanita",
+    "jenisProduk": [
+      "Tas Selempang & Bahu Wanita"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 115,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Top Handle Bag",
+    "jenisProduk": [
+      "Top Handle Bag"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 116,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Tote Bag",
+    "jenisProduk": [
+      "Tote Bag"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  },
+  {
+    "id": 117,
+    "kategoriUtama": "Tas Wanita",
+    "kategori": "Tas Wanita",
+    "kategoriProduk": "G",
+    "subKategori": "Tas Wanita Lainnya",
+    "jenisProduk": [
+      "Tas Wanita Lainnya"
+    ],
+    "regular": {
+      "rate": 0.075,
+      "maxPerQty": 40000
+    },
+    "special": {
+      "rate": 0.09,
+      "maxPerQty": 60000
+    }
+  }
 ]
