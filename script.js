@@ -13,6 +13,7 @@ let dataAdminNonMall = [];
 let dataPromoXtra = [];
 let dataXtraFee = [];
 let dataBiayaPembayaran = [];
+let productIndex = [];
 
 // ============================================================
 // DOM REFERENSI
@@ -21,7 +22,9 @@ const DOM = {};
 
 function cacheDomElements() {
     DOM.kategoriSelect = document.getElementById('kategori');
-    DOM.subKategoriSelect = document.getElementById('subKategori');
+    DOM.subKategoriSelect = document.getElementById('subKategoriSelect');
+    DOM.subKategoriDisplay = document.getElementById('subKategoriDisplay');
+    DOM.subKategoriHidden = document.getElementById('subKategori');
     DOM.tipeTokoSelect = document.getElementById('tipeToko');
     DOM.biayaAdminText = document.getElementById('biayaAdminText');
     DOM.biayaPembayaranText = document.getElementById('biayaPembayaranText');
@@ -35,6 +38,8 @@ function cacheDomElements() {
     DOM.pajak = document.getElementById('pajak');
     DOM.profitBersih = document.getElementById('profitBersih');
     DOM.profitBersihBox = document.getElementById('profitBersihBox');
+    DOM.searchProduk = document.getElementById('searchProduk');
+    DOM.searchResults = document.getElementById('searchResults');
     
     // Semua input
     DOM.inputs = {
@@ -97,6 +102,9 @@ async function loadAllData() {
         console.log('📊 xtraFee:', Object.keys(dataXtraFee).length, 'kategori');
         console.log('📊 biaya_pembayaran:', dataBiayaPembayaran.length, 'items');
         
+        // Build index untuk search
+        buildProductIndex();
+        
         // Inisialisasi aplikasi setelah data dimuat
         initApp();
         
@@ -104,6 +112,136 @@ async function loadAllData() {
         console.error('❌ Gagal load data:', error);
         alert('Gagal memuat data. Pastikan file JSON tersedia di folder data/\n\nError: ' + error.message);
     }
+}
+
+// ============================================================
+// BUILD PRODUCT INDEX UNTUK SEARCH
+// ============================================================
+function buildProductIndex() {
+    productIndex = [];
+    const seen = new Set();
+    
+    dataAdminNonMall.forEach(item => {
+        if (item.jenisProduk && Array.isArray(item.jenisProduk)) {
+            item.jenisProduk.forEach(product => {
+                // Hindari duplikat
+                const key = product + '|' + item.subKategori;
+                if (seen.has(key)) return;
+                seen.add(key);
+                
+                // Cari mall fee
+                const mallItem = dataAdminMall.find(m => 
+                    m.kategoriUtama === item.kategoriUtama && 
+                    m.subKategori === item.subKategori
+                );
+                
+                productIndex.push({
+                    keyword: product.toLowerCase(),
+                    displayName: product,
+                    kategoriUtama: item.kategoriUtama,
+                    kategori: item.kategori,
+                    subKategori: item.subKategori,
+                    adminFee: item.adminFee,
+                    mallFee: mallItem ? mallItem.adminFee : item.adminFee
+                });
+            });
+        }
+    });
+    
+    console.log('📊 Product Index:', productIndex.length, 'items');
+}
+
+// ============================================================
+// FUNGSI SEARCH PRODUK
+// ============================================================
+function searchProducts(query) {
+    if (!query || query.length < 2) {
+        return [];
+    }
+    
+    const q = query.toLowerCase();
+    const results = productIndex.filter(item => 
+        item.keyword.includes(q) || 
+        item.subKategori.toLowerCase().includes(q)
+    );
+    
+    // Batasi hasil maksimal 15
+    return results.slice(0, 15);
+}
+
+function displaySearchResults(results) {
+    const container = DOM.searchResults;
+    
+    if (results.length === 0) {
+        container.classList.remove('show');
+        container.innerHTML = '';
+        return;
+    }
+    
+    container.classList.add('show');
+    container.innerHTML = '';
+    
+    results.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'search-result-item';
+        
+        const leftDiv = document.createElement('div');
+        leftDiv.innerHTML = `
+            <div class="product-name">${item.displayName}</div>
+            <div class="product-path">${item.kategoriUtama} › ${item.kategori} › ${item.subKategori}</div>
+        `;
+        
+        const feeDiv = document.createElement('div');
+        feeDiv.className = 'product-fee';
+        feeDiv.textContent = `Admin: ${item.adminFee}%`;
+        
+        div.appendChild(leftDiv);
+        div.appendChild(feeDiv);
+        
+        div.addEventListener('click', () => {
+            selectProduct(item);
+        });
+        
+        container.appendChild(div);
+    });
+}
+
+function selectProduct(item) {
+    // Isi sub kategori display
+    DOM.subKategoriDisplay.value = `${item.subKategori} (${item.kategoriUtama})`;
+    DOM.subKategoriHidden.value = item.subKategori;
+    
+    // Set kategori
+    let kategoriValue = '';
+    if (item.kategoriUtama === 'Fashion') kategoriValue = 'fashion';
+    else if (item.kategoriUtama === 'FMCG') kategoriValue = 'fmcg';
+    else if (item.kategoriUtama === 'Elektronik') kategoriValue = 'elektronik';
+    else if (item.kategoriUtama === 'Lifestyle') kategoriValue = 'lifestyle';
+    else kategoriValue = 'lainnya';
+    
+    DOM.kategoriSelect.value = kategoriValue;
+    
+    // Update sub kategori dropdown
+    updateSubKategoriFromJSON();
+    
+    // Pilih sub kategori yang sesuai
+    const options = DOM.subKategoriSelect.options;
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value === item.subKategori) {
+            DOM.subKategoriSelect.selectedIndex = i;
+            break;
+        }
+    }
+    
+    // Update admin fee
+    hitungBiayaAdmin();
+    hitungBiayaPembayaran();
+    hitungSemua();
+    
+    // Sembunyikan hasil search
+    DOM.searchResults.classList.remove('show');
+    DOM.searchResults.innerHTML = '';
+    DOM.searchProduk.value = item.displayName;
 }
 
 // ============================================================
@@ -133,7 +271,8 @@ function formatRupiah(angka) {
 // ============================================================
 function updateSubKategoriFromJSON() {
     const kategori = DOM.kategoriSelect.value;
-    DOM.subKategoriSelect.innerHTML = '<option value="">-- Pilih Sub Kategori --</option>';
+    const select = DOM.subKategoriSelect;
+    select.innerHTML = '<option value="">-- Pilih Sub Kategori --</option>';
     
     // Filter data berdasarkan kategori utama dari admin_non-mall.json
     let dataSource = [];
@@ -169,11 +308,9 @@ function updateSubKategoriFromJSON() {
         option.value = subKategori;
         option.textContent = subKategori;
         
-        // Ambil admin fee dari data pertama
         const firstItem = grouped[subKategori][0];
         const adminFeeNonMall = firstItem.adminFee || 0;
         
-        // Cari admin fee mall dari file admin_mall.json
         let adminFeeMall = adminFeeNonMall;
         const mallItem = dataAdminMall.find(item => 
             item.kategoriUtama === firstItem.kategoriUtama && 
@@ -188,7 +325,7 @@ function updateSubKategoriFromJSON() {
         option.setAttribute('data-kategori-utama', firstItem.kategoriUtama || '');
         option.setAttribute('data-kategori', firstItem.kategori || '');
         
-        DOM.subKategoriSelect.appendChild(option);
+        select.appendChild(option);
     });
 }
 
@@ -237,7 +374,6 @@ function hitungBiayaPembayaran() {
         return 0;
     }
     
-    // Cari data biaya pembayaran berdasarkan tipe toko
     let data = null;
     if (tipeToko === 'mall') {
         data = dataBiayaPembayaran.find(item => item.tipeToko === 'mall');
@@ -255,7 +391,6 @@ function hitungBiayaPembayaran() {
     
     let biaya = hargaNett * rate;
     
-    // Terapkan batas maksimal jika ada
     if (maxPerQty > 0 && biaya > maxPerQty) {
         biaya = maxPerQty;
     }
@@ -308,7 +443,6 @@ function hitungGratisOngkirDariJSON() {
     const subKategori = selectedOption.value;
     const hargaNett = getNumber('hargaJual') - getNumber('diskon') - getNumber('voucher');
     
-    // Cari di xtraCategory.json berdasarkan kategoriUtama dan subKategori
     let found = dataXTRACategory.find(item => 
         item.kategoriUtama === kategoriUtama && 
         item.subKategori === subKategori
@@ -317,7 +451,6 @@ function hitungGratisOngkirDariJSON() {
     let result = { biasa: 0, khusus: 0 };
     
     if (found && found.regular && found.special) {
-        // Hitung biaya gratis ongkir biasa
         if (found.regular && found.regular.rate) {
             let biaya = hargaNett * found.regular.rate;
             if (found.regular.maxPerQty && biaya > found.regular.maxPerQty) {
@@ -326,7 +459,6 @@ function hitungGratisOngkirDariJSON() {
             result.biasa = biaya;
         }
         
-        // Hitung biaya gratis ongkir khusus
         if (found.special && found.special.rate) {
             let biaya = hargaNett * found.special.rate;
             if (found.special.maxPerQty && biaya > found.special.maxPerQty) {
@@ -343,7 +475,6 @@ function hitungGratisOngkirDariJSON() {
 // FUNGSI UTAMA PERHITUNGAN
 // ============================================================
 function hitungSemua() {
-    // Ambil semua input user
     const hargaJual = getNumber('hargaJual');
     const diskon = getNumber('diskon');
     const voucher = getNumber('voucher');
@@ -366,7 +497,6 @@ function hitungSemua() {
     const biayaLain = getNumber('biayaLain');
     const pajakRate = getNumber('pajakRate') / 100;
     
-    // INPUT MANUAL untuk biaya yang belum otomatis
     const biayaProsesManual = getNumber('biayaProsesManual');
     const gratisOngkirBiasaManual = getNumber('gratisOngkirBiasaManual');
     const gratisOngkirKhususManual = getNumber('gratisOngkirKhususManual');
@@ -375,22 +505,21 @@ function hitungSemua() {
     const hargaNett = hargaJual - diskon - voucher;
     DOM.hargaNett.innerText = formatRupiah(hargaNett);
     
-    // 2. Biaya Administrasi (otomatis dari pilihan sub kategori)
+    // 2. Biaya Administrasi
     let biayaAdmin = hitungBiayaAdmin();
     if (isNaN(biayaAdmin)) biayaAdmin = 0;
     
-    // 3. Biaya Pembayaran (otomatis dari tipe toko + JSON)
+    // 3. Biaya Pembayaran
     let biayaPembayaran = hitungBiayaPembayaran();
     if (isNaN(biayaPembayaran)) biayaPembayaran = 0;
     
-    // 4. Biaya Proses Pesanan (input manual)
+    // 4. Biaya Proses Pesanan
     let biayaProses = biayaProsesManual;
     
-    // 5. Gratis Ongkir (gabungan dari manual + JSON)
+    // 5. Gratis Ongkir
     let gratisOngkirBiasa = gratisOngkirBiasaManual;
     let gratisOngkirKhusus = gratisOngkirKhususManual;
     
-    // Coba ambil dari JSON jika manual bernilai 0
     const ongkirFromJSON = hitungGratisOngkirDariJSON();
     if (gratisOngkirBiasa === 0 && ongkirFromJSON.biasa > 0) {
         gratisOngkirBiasa = ongkirFromJSON.biasa;
@@ -432,7 +561,7 @@ function hitungSemua() {
     // 12. Produk PO
     let biayaPO = (produkPO === 'Yes3') ? 0.03 * hargaNett : 0;
     
-    // 13. Total Biaya Shopee (SUM SEMUA)
+    // 13. Total Biaya Shopee
     const totalBiayaShopee = biayaAdmin + biayaPembayaran + biayaProses + 
                              gratisOngkirBiasa + gratisOngkirKhusus + 
                              biayaPromoXTRA + biayaPromoXTRAplus + biayaLiveXTRA + 
@@ -477,7 +606,6 @@ function hitungSemua() {
     const profitBersih = profitSebelumPajak - pajak;
     DOM.profitBersih.innerText = formatRupiah(profitBersih);
     
-    // Ubah warna berdasarkan profit
     if (profitBersih >= 0) {
         DOM.profitBersih.className = 'result-value profit-positive';
         DOM.profitBersihBox.style.background = '#d1fae5';
@@ -494,6 +622,11 @@ function attachEventListeners() {
     // Kategori & Tipe Toko
     DOM.kategoriSelect.addEventListener('change', () => {
         updateSubKategoriFromJSON();
+        // Reset sub kategori display
+        DOM.subKategoriDisplay.value = '';
+        DOM.subKategoriHidden.value = '';
+        hitungBiayaAdmin();
+        hitungBiayaPembayaran();
         hitungSemua();
     });
     
@@ -504,8 +637,41 @@ function attachEventListeners() {
     });
     
     DOM.subKategoriSelect.addEventListener('change', () => {
+        // Update display
+        const selectedOption = DOM.subKategoriSelect.options[DOM.subKategoriSelect.selectedIndex];
+        if (selectedOption && selectedOption.value) {
+            const kategoriUtama = selectedOption.getAttribute('data-kategori-utama') || '';
+            DOM.subKategoriDisplay.value = `${selectedOption.value} (${kategoriUtama})`;
+            DOM.subKategoriHidden.value = selectedOption.value;
+        } else {
+            DOM.subKategoriDisplay.value = '';
+            DOM.subKategoriHidden.value = '';
+        }
         hitungBiayaAdmin();
         hitungSemua();
+    });
+    
+    // Search produk
+    DOM.searchProduk.addEventListener('input', function() {
+        const query = this.value.trim();
+        const results = searchProducts(query);
+        displaySearchResults(results);
+    });
+    
+    DOM.searchProduk.addEventListener('focus', function() {
+        const query = this.value.trim();
+        if (query.length >= 2) {
+            const results = searchProducts(query);
+            displaySearchResults(results);
+        }
+    });
+    
+    // Sembunyikan hasil saat klik di luar
+    document.addEventListener('click', function(e) {
+        if (!DOM.searchProduk.contains(e.target) && !DOM.searchResults.contains(e.target)) {
+            DOM.searchResults.classList.remove('show');
+            DOM.searchResults.innerHTML = '';
+        }
     });
     
     // Semua input number
