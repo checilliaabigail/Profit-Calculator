@@ -5,6 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Kalkulator Cuan Shopee | Cuan Berkah Digital</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style tambahan untuk search autocomplete */
+        .search-wrapper {
+            position: relative;
+        }
+        .search-results {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            max-height: 250px;
+            overflow-y: auto;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-top: 4px;
+        }
+        .search-results.show {
+            display: block;
+        }
+        .search-result-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.15s;
+        }
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        .search-result-item:hover {
+            background: #f7fafc;
+        }
+        .search-result-item .product-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+        .search-result-item .product-path {
+            font-size: 0.75rem;
+            color: #718096;
+            margin-top: 2px;
+        }
+        .search-result-item .product-fee {
+            font-size: 0.8rem;
+            color: #4a5568;
+            font-weight: 600;
+            background: #edf2f7;
+            padding: 2px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        .sub-kategori-display {
+            background: #f7fafc;
+            cursor: not-allowed;
+            color: #4a5568;
+        }
+        .sub-kategori-display:focus {
+            box-shadow: none;
+            border-color: #e2e8f0;
+        }
+        .info-text a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .info-text a:hover {
+            text-decoration: underline;
+        }
+        .search-results::-webkit-scrollbar {
+            width: 6px;
+        }
+        .search-results::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .search-results::-webkit-scrollbar-thumb {
+            background: #c4b5d4;
+            border-radius: 10px;
+        }
+        .search-results::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+        @media (max-width: 600px) {
+            .search-result-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            .search-result-item .product-fee {
+                align-self: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -66,7 +164,7 @@
                 <div class="info-text">Memilih Shopee Mall akan mengaktifkan biaya pembayaran 1,8%</div>
             </div>
 
-            <!-- KATEGORI (hanya 5 besar) -->
+            <!-- KATEGORI -->
             <div class="form-group">
                 <label>Kategori Produk</label>
                 <select id="kategori">
@@ -78,13 +176,31 @@
                 </select>
             </div>
 
-            <!-- SUB KATEGORI (otomatis berubah sesuai kategori) -->
+            <!-- SEARCH PRODUK (AUTOCOMPLETE) -->
             <div class="form-group">
-                <label>Sub Kategori</label>
-                <select id="subKategori">
-                    <option value="">Pilih kategori terlebih dahulu</option>
+                <label>Cari Produk (ketik nama produk)</label>
+                <div class="search-wrapper">
+                    <input type="text" id="searchProduk" placeholder="Ketik nama produk... (contoh: Kacamata Hitam)" autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <div class="info-text">Ketik nama produk, sistem akan mencari sub kategori yang sesuai</div>
+            </div>
+
+            <!-- SUB KATEGORI (otomatis) -->
+            <div class="form-group">
+                <label>Sub Kategori (otomatis)</label>
+                <input type="text" id="subKategoriDisplay" class="sub-kategori-display" placeholder="Pilih produk di atas atau pilih manual di bawah" readonly>
+                <input type="hidden" id="subKategori" value="">
+                <div class="info-text">Sub kategori akan terisi otomatis setelah Anda memilih produk</div>
+            </div>
+
+            <!-- SUB KATEGORI MANUAL (fallback) -->
+            <div class="form-group">
+                <label>Atau pilih Sub Kategori Manual</label>
+                <select id="subKategoriSelect">
+                    <option value="">-- Pilih Sub Kategori --</option>
                 </select>
-                <div class="info-text">Pilih sub kategori untuk menentukan biaya administrasi</div>
+                <div class="info-text">Pilih sub kategori manual jika produk tidak ditemukan</div>
             </div>
 
             <!-- TAMPILAN BIAYA ADMIN OTOMATIS -->
@@ -101,7 +217,7 @@
 
             <div class="separator"></div>
 
-            <!-- BIAYA YANG DIINPUT MANUAL (tetap dipertahankan) -->
+            <!-- BIAYA YANG DIINPUT MANUAL -->
             <div class="form-group">
                 <label>Biaya Proses Pesanan</label>
                 <div class="input-group">
@@ -111,7 +227,6 @@
                 <div class="info-text">Rumus Excel: 1250 / basket size (isi langsung nominalnya)</div>
             </div>
 
-            <!-- Gratis Ongkir XTRA dari JSON + Manual Override -->
             <div class="form-group">
                 <label>Gratis Ongkir XTRA (ukuran biasa)</label>
                 <div class="input-group">
