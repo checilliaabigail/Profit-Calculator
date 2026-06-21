@@ -16,286 +16,6 @@ let dataBiayaPembayaran = [];
 let productIndex = [];
 
 // ============================================================
-// MAPPING SUB KATEGORI KE KATEGORI PRODUK (XTRA)
-// ============================================================
-const subKategoriToProduk = {
-    // ==================== FASHION ====================
-    "Aksesoris Rambut": "H",
-    "Aksesoris Tambahan": "H",
-    "Anting": "H",
-    "Cincin": "H",
-    "Dasi": "H",
-    "Gelang Kaki": "H",
-    "Gelang Tangan & Bangle": "H",
-    "Ikat Pinggang": "H",
-    "Kacamata & Aksesoris": "H",
-    "Kalung": "H",
-    "Sarung Tangan": "H",
-    "Set & Paket Aksesoris": "H",
-    "Syal & Selendang": "H",
-    "Topi": "H",
-    "Logam Mulia": "B",
-    "Perhiasan Berharga": "B",
-    "Aksesoris Fashion Lainnya": "H",
-    "Aksesoris Bayi & Anak": "D",
-    "Pakaian Anak Laki-Laki": "D",
-    "Pakaian Anak Perempuan": "D",
-    "Pakaian Bayi": "D",
-    "Sepatu Anak Laki-Laki": "D",
-    "Sepatu Anak Perempuan": "D",
-    "Sepatu Bayi": "D",
-    "Fashion Bayi & Anak Lainnya": "D",
-    "Mukena & Perlengkapan Sholat": "G",
-    "Outerwear": "G",
-    "Pakaian Muslim Anak": "G",
-    "Pakaian Muslim Pria": "G",
-    "Pakaian Muslim Wanita": "G",
-    "Set": "G",
-    "Fashion Muslim Lainnya": "G",
-    "Aksesoris Jam Tangan": "H",
-    "Jam Tangan Couple": "H",
-    "Jam Tangan Pria": "H",
-    "Jam Tangan Wanita": "H",
-    "Jam Tangan Lainnya": "H",
-    "Aksesoris Travel": "G",
-    "Koper": "G",
-    "Tas Travel": "G",
-    "Koper & Tas Travel Lainnya": "G",
-    "Kaos Kaki": "F",
-    "Atasan": "F",
-    "Celana Panjang": "F",
-    "Celana Panjang Jeans": "F",
-    "Celana Pendek": "F",
-    "Hoodie & Sweatshirt": "F",
-    "Jaket, Mantel, & Rompi": "F",
-    "Jas Formal": "F",
-    "Kostum": "F",
-    "Pakaian Dalam": "F",
-    "Pakaian Kerja": "F",
-    "Pakaian Tidur": "F",
-    "Pakaian Tradisional": "F",
-    "Set Pakaian Pria": "F",
-    "Sweater & Cardigan": "F",
-    "Pakaian Pria Lainnya": "F",
-    "Kaos Kaki & Stocking": "F",
-    "Baju Hamil": "G",
-    "Celana Jeans": "G",
-    "Celana Panjang & Legging": "G",
-    "Celana Pendek": "G",
-    "Dress": "G",
-    "Jumpsuit, Playsuit, & Overall": "G",
-    "Kain": "G",
-    "Pakaian Dalam": "G",
-    "Pakaian Tidur & Piyama": "G",
-    "Pakaian Tradisional": "G",
-    "Rok": "G",
-    "Sweater & Cardigan": "G",
-    "Wedding Dress": "G",
-    "Pakaian Wanita Lainnya": "G",
-    "Aksesoris & Perawatan Sepatu": "F",
-    "Boot": "F",
-    "Loafer": "F",
-    "Oxford": "F",
-    "Sandal": "F",
-    "Slip-On & Mules": "F",
-    "Sneakers": "F",
-    "Sepatu Pria Lainnya": "F",
-    "Boots": "F",
-    "Heels": "F",
-    "Sandal Jepit & Sandal Lainnya": "F",
-    "Sepatu Flat": "F",
-    "Wedges": "F",
-    "Sepatu Wanita Lainnya": "F",
-    "Clutch": "G",
-    "Dompet": "G",
-    "Ransel Pria": "G",
-    "Tas Kerja": "G",
-    "Tas Laptop": "G",
-    "Tas Pinggang Pria": "G",
-    "Tas Selempang & Bahu Pria": "G",
-    "Tote Bag": "G",
-    "Tas Pria Lainnya": "G",
-    "Aksesoris Tas": "G",
-    "Dompet Wanita": "G",
-    "Ransel Wanita": "G",
-    "Tas Pinggang Wanita": "G",
-    "Tas Selempang & Bahu Wanita": "G",
-    "Top Handle Bag": "G",
-    "Tas Wanita Lainnya": "G",
-
-    // ==================== FMCG ====================
-    "Mainan": "H",
-    "Kamar Bayi": "D",
-    "Keamanan Bayi": "D",
-    "Kesehatan Kehamilan": "D",
-    "Perlengkapan Ibu Hamil": "D",
-    "Perlengkapan Makan Bayi": "D",
-    "Perlengkapan Mandi": "D",
-    "Perlengkapan Travelling Bayi": "D",
-    "Popok & Pispot": "D",
-    "Set & Paket Hadiah": "D",
-    "Susu Formula & Makanan Bayi": "D",
-    "Ibu & Bayi Lainnya": "D",
-    "Kesehatan Seksual": "D",
-    "Perawatan Diri": "D",
-    "Obat-obatan & Alat Kesehatan": "E",
-    "Suplemen Makanan": "E",
-    "Kesehatan Lainnya": "E",
-    "Bahan Baking": "E",
-    "Bahan Pokok": "E",
-    "Kebutuhan Memasak": "E",
-    "Makanan Instan": "E",
-    "Makanan Ringan": "E",
-    "Makanan Segar & Beku": "E",
-    "Menu Sarapan": "E",
-    "Minuman": "E",
-    "Minuman Alkohol": "E",
-    "Roti & Kue": "E",
-    "Set Hadiah & Hampers": "E",
-    "Susu & Olahan": "E",
-    "Makanan & Minuman Lainnya": "E",
-    "Alat Kecantikan": "D",
-    "Kosmetik": "D",
-    "Paket & Set Kecantikan": "D",
-    "Parfum & Wewangian": "D",
-    "Perawatan Pria": "D",
-    "Perawatan Rambut": "D",
-    "Perawatan Tangan, Kaki & Kuku": "D",
-    "Perawatan Tubuh": "D",
-    "Perawatan Wajah": "D",
-    "Perawatan & Kecantikan Lainnya": "D",
-
-    // ==================== ELEKTRONIK ====================
-    "Amplifier & Mixer": "D",
-    "Earphone, Headphone, & Headset": "D",
-    "Kabel & Konverter Audio & Video": "D",
-    "Media Player": "D",
-    "Mikrofon & Aksesoris": "D",
-    "Perangkat Audio & Speaker": "D",
-    "Audio Lainnya": "D",
-    "Proyektor & Aksesoris": "C",
-    "Baterai": "D",
-    "Peralatan Listrik Besar": "D",
-    "Peralatan Listrik Kecil": "D",
-    "Perangkat Dapur": "D",
-    "Remot Kontrol": "D",
-    "Rokok Elektronik & Shisha": "D",
-    "TV & Aksesoris": "D",
-    "Kelistrikan": "F",
-    "Elektronik Lainnya": "D",
-    "Aksesoris Konsol": "D",
-    "Konsol Game": "D",
-    "Video Game": "D",
-    "Gaming & Konsol Lainnya": "D",
-    "Handphone": "A",
-    "Tablet": "A",
-    "Aksesoris": "D",
-    "Handphone & Aksesoris Lainnya": "D",
-    "Kartu Perdana": "D",
-    "Perangkat Wearable": "D",
-    "Walkie Talkie": "D",
-    "Aksesoris Drone": "D",
-    "Aksesoris Kamera": "D",
-    "Aksesoris Lensa": "D",
-    "Drone": "D",
-    "Kamera": "D",
-    "Kamera Keamanan": "D",
-    "Lensa": "D",
-    "Perawatan Kamera": "D",
-    "Kamera & Drone Lainnya": "D",
-    "Desktop": "A",
-    "Laptop": "A",
-    "Monitor": "A",
-    "Komponen Desktop & Laptop": "B",
-    "Printer & Scanner": "B",
-    "Penyimpanan Data": "C",
-    "Peralatan Kantor": "C",
-    "Aksesoris Desktop & Laptop": "D",
-    "Keyboard & Mouse": "D",
-    "Komponen Network": "D",
-    "Software": "D",
-    "Komputer & Aksesoris Lainnya": "D",
-
-    // ==================== LIFESTYLE ====================
-    "Alat Tulis": "D",
-    "Pembungkus Kado & Kemasan": "D",
-    "Perlengkapan Menggambar": "D",
-    "Perlengkapan Sekolah & Kantor": "D",
-    "Surat-Menyurat": "D",
-    "Buku Tulis & Kertas": "E",
-    "Buku & Alat Tulis Lainnya": "E",
-    "Majalah & Koran": "D",
-    "Buku Bacaan": "E",
-    "E-Book": "D",
-    "Buku & Majalah Lainnya": "E",
-    "Grooming Hewan": "G",
-    "Pakaian & Aksesoris Hewan": "G",
-    "Perawatan Kesehatan Hewan": "G",
-    "Aksesoris Hewan Peliharaan": "H",
-    "Litter & Toilet": "H",
-    "Makanan Hewan": "H",
-    "Hewan Peliharaan Lainnya": "E",
-    "Alat & Aksesoris Musik": "E",
-    "Album Foto": "E",
-    "CD, DVD & Bluray": "G",
-    "Piringan Hitam": "G",
-    "Souvenir & Hadiah": "G",
-    "Koleksi": "H",
-    "Mainan & Games": "H",
-    "Perlengkapan Menjahit": "F",
-    "Hobi & Koleksi Lainnya": "E",
-    "Aksesoris Eksterior Mobil": "G",
-    "Aksesoris Interior Mobil": "G",
-    "Gantungan & Sarung Kunci Kendaraan": "G",
-    "Mobil": "G",
-    "Oli & Pelumas Kendaraan": "G",
-    "Perawatan Kendaraan": "G",
-    "Perkakas & Perlengkapan Kendaraan": "G",
-    "Suku Cadang Mobil": "G",
-    "Mobil Lainnya": "G",
-    "Aksesoris Olahraga & Aktivitas Outdoor": "G",
-    "Alat Rekreasi Olahraga & Aktivitas Outdoor": "H",
-    "Pakaian Olahraga & Aktivitas Outdoor": "G",
-    "Sepatu Olahraga": "H",
-    "Olahraga & Outdoor Lainnya": "H",
-    "Pengharum Ruangan & Aromaterapi": "D",
-    "Peralatan Makan": "D",
-    "Perlengkapan Dapur": "D",
-    "Perlengkapan Keagamaan": "D",
-    "Perlengkapan Rumah Lainnya": "D",
-    "Dekorasi": "F",
-    "Furniture": "F",
-    "Kamar Tidur": "F",
-    "Lampu": "F",
-    "Alat Pengaman": "G",
-    "Alat Pertukangan & Renovasi Rumah": "G",
-    "Kamar Mandi": "G",
-    "Perawatan Rumah": "G",
-    "Perlengkapan Pesta": "G",
-    "Taman": "G",
-    "Organizer Rumah": "H",
-    "Penghangat Tangan & Kantong Kompres": "H",
-    "Aksesoris Sepeda Motor": "G",
-    "Helm & Aksesoris Pengendara Motor": "G",
-    "Sepeda Motor": "G",
-    "Suku Cadang Motor": "G",
-    "Sepeda Motor Lainnya": "G",
-
-    // ==================== KATEGORI LAINNYA ====================
-    "Belanja": "D",
-    "E-Money": "G",
-    "Layanan": "D",
-    "Listrik, Gas, & Air": "D",
-    "Makanan & Minuman": "D",
-    "Shopee": "D",
-    "Streaming": "D",
-    "Telco": "D",
-    "Tiket Event": "D",
-    "Travel & Tour": "D",
-    "Gaming": "D"
-};
-
-// ============================================================
 // DOM REFERENSI
 // ============================================================
 const DOM = {};
@@ -478,9 +198,14 @@ function displaySearchResults(results) {
 }
 
 function selectProduct(item) {
+    // Set nama produk yang dipilih
+    DOM.searchProduk.value = item.displayName;
+
+    // Set sub kategori display
     DOM.subKategoriDisplay.value = `${item.subKategori} (${item.kategoriUtama})`;
     DOM.subKategoriHidden.value = item.subKategori;
 
+    // Set kategori
     let kategoriValue = '';
     if (item.kategoriUtama === 'Fashion') kategoriValue = 'fashion';
     else if (item.kategoriUtama === 'FMCG') kategoriValue = 'fmcg';
@@ -490,8 +215,10 @@ function selectProduct(item) {
 
     DOM.kategoriSelect.value = kategoriValue;
 
+    // Update sub kategori dropdown
     updateSubKategoriFromJSON();
 
+    // Pilih sub kategori yang sesuai
     const options = DOM.subKategoriSelect.options;
     for (let i = 0; i < options.length; i++) {
         if (options[i].value === item.subKategori) {
@@ -500,13 +227,14 @@ function selectProduct(item) {
         }
     }
 
+    // Hitung ulang
     hitungBiayaAdmin();
     hitungBiayaPembayaran();
     hitungSemua();
 
+    // Sembunyikan hasil search
     DOM.searchResults.classList.remove('show');
     DOM.searchResults.innerHTML = '';
-    DOM.searchProduk.value = item.displayName;
 }
 
 // ============================================================
@@ -696,61 +424,97 @@ function hitungPromoXTRAplus() {
 
 // ============================================================
 // FUNGSI HITUNG GRATIS ONGKIR XTRA DARI JSON
+// (Berdasarkan nama produk yang dipilih)
 // ============================================================
 function hitungGratisOngkirDariJSON() {
+    // Ambil nama produk dari search input
+    const productName = DOM.searchProduk.value.trim();
     const selectedOption = DOM.subKategoriSelect.options[DOM.subKategoriSelect.selectedIndex];
-    if (!selectedOption || !selectedOption.value) return { biasa: 0, khusus: 0 };
-
-    const subKategori = selectedOption.value;
-    const kategoriUtama = selectedOption.getAttribute('data-kategori-utama') || '';
+    const subKategori = selectedOption ? selectedOption.value : '';
+    const kategoriUtama = selectedOption ? selectedOption.getAttribute('data-kategori-utama') || '' : '';
     const hargaNett = getNumber('hargaJual') - getNumber('diskon') - getNumber('voucher');
 
-    // Cari kategoriProduk dari mapping
-    const kategoriProduk = subKategoriToProduk[subKategori] || null;
+    if (hargaNett <= 0) {
+        return { biasa: 0, khusus: 0 };
+    }
 
     let found = null;
 
-    if (kategoriProduk) {
-        // Cari di xtraCategory.json berdasarkan kategoriUtama + kategoriProduk
-        found = dataXTRACategory.find(item =>
-            item.kategoriUtama === kategoriUtama &&
-            item.kategoriProduk === kategoriProduk
-        );
+    // STRATEGI 1: Cari berdasarkan nama produk di jenisProduk
+    if (productName && productName.length > 0) {
+        found = dataXTRACategory.find(item => {
+            if (item.jenisProduk && Array.isArray(item.jenisProduk)) {
+                return item.jenisProduk.some(p =>
+                    p.toLowerCase() === productName.toLowerCase() ||
+                    p.toLowerCase().includes(productName.toLowerCase())
+                );
+            }
+            return false;
+        });
+        if (found) {
+            console.log('✅ XTRA ditemukan via nama produk:', productName, '→', found.subKategori);
+        }
     }
 
-    // Jika tidak ditemukan, coba cari berdasarkan kategoriUtama + subKategori (fallback)
-    if (!found) {
+    // STRATEGI 2: Jika tidak ditemukan, cari via sub kategori (exact match)
+    if (!found && subKategori) {
         found = dataXTRACategory.find(item =>
             item.kategoriUtama === kategoriUtama &&
             item.subKategori === subKategori
         );
+        if (found) {
+            console.log('✅ XTRA ditemukan via subKategori exact match:', found.subKategori);
+        }
     }
 
-    // Jika masih tidak ditemukan, coba cari berdasarkan kategoriUtama saja (last fallback)
-    if (!found) {
+    // STRATEGI 3: Jika masih tidak ditemukan, cari partial match di sub kategori
+    if (!found && subKategori) {
+        const keywords = subKategori.toLowerCase().split(/[()\-,\s]+/).filter(w => w.length > 3);
+        for (const keyword of keywords) {
+            found = dataXTRACategory.find(item =>
+                item.kategoriUtama === kategoriUtama &&
+                item.subKategori.toLowerCase().includes(keyword)
+            );
+            if (found) break;
+        }
+        if (found) {
+            console.log('✅ XTRA ditemukan via partial match subKategori:', found.subKategori);
+        }
+    }
+
+    // STRATEGI 4: Fallback ke kategori utama
+    if (!found && kategoriUtama) {
         found = dataXTRACategory.find(item =>
             item.kategoriUtama === kategoriUtama
         );
+        if (found) {
+            console.log('⚠️ XTRA fallback ke kategori utama:', found.subKategori);
+        }
+    }
+
+    if (!found) {
+        console.log('❌ TIDAK ADA data XTRA untuk:', productName || subKategori);
+        return { biasa: 0, khusus: 0 };
     }
 
     let result = { biasa: 0, khusus: 0 };
 
-    if (found && found.regular && found.special) {
-        if (found.regular && found.regular.rate) {
-            let biaya = hargaNett * found.regular.rate;
-            if (found.regular.maxPerQty && biaya > found.regular.maxPerQty) {
-                biaya = found.regular.maxPerQty;
-            }
-            result.biasa = biaya;
+    if (found.regular && found.regular.rate) {
+        let biaya = hargaNett * found.regular.rate;
+        if (found.regular.maxPerQty && biaya > found.regular.maxPerQty) {
+            biaya = found.regular.maxPerQty;
         }
+        result.biasa = biaya;
+        console.log('✅ XTRA Regular:', (found.regular.rate * 100) + '% → Rp' + biaya.toLocaleString());
+    }
 
-        if (found.special && found.special.rate) {
-            let biaya = hargaNett * found.special.rate;
-            if (found.special.maxPerQty && biaya > found.special.maxPerQty) {
-                biaya = found.special.maxPerQty;
-            }
-            result.khusus = biaya;
+    if (found.special && found.special.rate) {
+        let biaya = hargaNett * found.special.rate;
+        if (found.special.maxPerQty && biaya > found.special.maxPerQty) {
+            biaya = found.special.maxPerQty;
         }
+        result.khusus = biaya;
+        console.log('✅ XTRA Special:', (found.special.rate * 100) + '% → Rp' + biaya.toLocaleString());
     }
 
     return result;
@@ -801,10 +565,11 @@ function hitungSemua() {
     // 4. Biaya Proses Pesanan
     let biayaProses = biayaProsesManual;
 
-    // 5. Gratis Ongkir
+    // 5. Gratis Ongkir (gabungan dari manual + JSON)
     let gratisOngkirBiasa = gratisOngkirBiasaManual;
     let gratisOngkirKhusus = gratisOngkirKhususManual;
 
+    // Coba ambil dari JSON jika manual bernilai 0
     const ongkirFromJSON = hitungGratisOngkirDariJSON();
     if (gratisOngkirBiasa === 0 && ongkirFromJSON.biasa > 0) {
         gratisOngkirBiasa = ongkirFromJSON.biasa;
@@ -933,6 +698,7 @@ function attachEventListeners() {
         hitungSemua();
     });
 
+    // Search produk
     DOM.searchProduk.addEventListener('input', function() {
         const query = this.value.trim();
         const results = searchProducts(query);
@@ -947,6 +713,7 @@ function attachEventListeners() {
         }
     });
 
+    // Sembunyikan hasil saat klik di luar
     document.addEventListener('click', function(e) {
         if (!DOM.searchProduk.contains(e.target) && !DOM.searchResults.contains(e.target)) {
             DOM.searchResults.classList.remove('show');
@@ -954,6 +721,7 @@ function attachEventListeners() {
         }
     });
 
+    // Semua input number
     const inputIds = ['hargaJual', 'diskon', 'voucher', 'biayaProsesManual',
         'gratisOngkirBiasaManual', 'gratisOngkirKhususManual', 'hpp', 'biayaPenanganan',
         'roas', 'biayaIklanLain', 'komisiAfiliasi', 'promosiLuar', 'biayaPacking',
@@ -968,6 +736,7 @@ function attachEventListeners() {
         }
     });
 
+    // Semua toggle select
     const toggleIds = ['promoXTRA', 'promoXTRAplus', 'liveXTRA', 'spayLater', 'hematKirim', 'asuransi', 'produkPO'];
     toggleIds.forEach(id => {
         const el = document.getElementById(id);
