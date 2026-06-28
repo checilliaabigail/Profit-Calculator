@@ -46,9 +46,7 @@ function cacheDomElements() {
         hargaJual: document.getElementById('hargaJual'),
         diskon: document.getElementById('diskon'),
         voucher: document.getElementById('voucher'),
-        biayaProsesManual: document.getElementById('biayaProsesManual'),
-        gratisOngkirBiasaManual: document.getElementById('gratisOngkirBiasaManual'),
-        gratisOngkirKhususManual: document.getElementById('gratisOngkirKhususManual'),
+        basketSize: document.getElementById('basketSize'),
         hpp: document.getElementById('hpp'),
         biayaPenanganan: document.getElementById('biayaPenanganan'),
         roas: document.getElementById('roas'),
@@ -266,7 +264,7 @@ function formatRupiah(angka) {
 function resetForm() {
     const inputIds = [
         'productName', 'hargaJual', 'diskon', 'voucher',
-        'biayaProsesManual', 'gratisOngkirBiasaManual', 'gratisOngkirKhususManual',
+        'basketSize',
         'hpp', 'biayaPenanganan', 'roas', 'biayaIklanLain',
         'komisiAfiliasi', 'promosiLuar', 'biayaPacking', 'biayaOperasional',
         'biayaLain', 'pajakRate'
@@ -605,8 +603,6 @@ function hitungSemua() {
 
     const basketSize = getNumber('basketSize');
     const biayaProses = basketSize > 0 ? Math.round(1250 / basketSize) : 0;
-    const gratisOngkirBiasaManual = getNumber('gratisOngkirBiasaManual');
-    const gratisOngkirKhususManual = getNumber('gratisOngkirKhususManual');
 
     // 1. Harga Jual Nett
     const hargaNett = hargaJual - diskon - voucher;
@@ -620,26 +616,18 @@ function hitungSemua() {
     let biayaPembayaran = hitungBiayaPembayaran();
     if (isNaN(biayaPembayaran)) biayaPembayaran = 0;
 
-    // 4. Biaya Proses Pesanan
-    let biayaProses = biayaProsesManual;
+    // 4. Biaya Proses Pesanan (otomatis dari basket size)
 
-    // 5. Gratis Ongkir
-    let gratisOngkirBiasa = gratisOngkirBiasaManual;
-    let gratisOngkirKhusus = gratisOngkirKhususManual;
-
+    // 5. Gratis Ongkir XTRA (hanya salah satu sesuai ukuran barang)
     const ongkirFromJSON = hitungGratisOngkirDariJSON();
-
-    // ⚠️ UPDATE INPUT DENGAN NILAI DARI JSON ⚠️
-    if (gratisOngkirBiasa === 0 && ongkirFromJSON.biasa > 0) {
-        gratisOngkirBiasa = ongkirFromJSON.biasa;
-        // Isi input dengan nilai yang dihitung
-        document.getElementById('gratisOngkirBiasaManual').value = Math.round(gratisOngkirBiasa);
+    const ukuranBarang = document.getElementById('ukuranBarang').value;
+    let gratisOngkir = 0;
+    if (ukuranBarang === 'biasa') {
+        gratisOngkir = ongkirFromJSON.biasa;
+    } else {
+        gratisOngkir = ongkirFromJSON.khusus;
     }
-    if (gratisOngkirKhusus === 0 && ongkirFromJSON.khusus > 0) {
-        gratisOngkirKhusus = ongkirFromJSON.khusus;
-        // Isi input dengan nilai yang dihitung
-        document.getElementById('gratisOngkirKhususManual').value = Math.round(gratisOngkirKhusus);
-    }
+    document.getElementById('gratisOngkirXtraText').innerText = formatRupiah(gratisOngkir);
 
     // 6. Promo XTRA
     let biayaPromoXTRA = hitungPromoXTRA();
@@ -676,7 +664,7 @@ function hitungSemua() {
 
     // 13. Total Biaya Shopee
     const totalBiayaShopee = biayaAdmin + biayaPembayaran + biayaProses +
-        gratisOngkirBiasa + gratisOngkirKhusus +
+        gratisOngkir +
         biayaPromoXTRA + biayaPromoXTRAplus + biayaLiveXTRA +
         biayaSPayLater + biayaHematKirim + biayaAsuransi + biayaPO;
     DOM.totalBiayaShopee.innerText = formatRupiah(totalBiayaShopee);
@@ -788,8 +776,8 @@ function attachEventListeners() {
         }
     });
 
-    const inputIds = ['hargaJual', 'diskon', 'voucher', 'biayaProsesManual',
-        'gratisOngkirBiasaManual', 'gratisOngkirKhususManual', 'hpp', 'biayaPenanganan',
+    const inputIds = ['hargaJual', 'diskon', 'voucher', 'basketSize',
+        'hpp', 'biayaPenanganan',
         'roas', 'biayaIklanLain', 'komisiAfiliasi', 'promosiLuar', 'biayaPacking',
         'biayaOperasional', 'biayaLain', 'pajakRate'
     ];
@@ -801,6 +789,12 @@ function attachEventListeners() {
             el.addEventListener('change', hitungSemua);
         }
     });
+
+    // Listener untuk toggle ukuran barang
+    const ukuranBarangEl = document.getElementById('ukuranBarang');
+    if (ukuranBarangEl) {
+        ukuranBarangEl.addEventListener('change', hitungSemua);
+    }
 
     const toggleIds = ['promoXTRA', 'promoXTRAplus', 'liveXTRA', 'spayLater', 'hematKirim', 'asuransi', 'produkPO'];
     toggleIds.forEach(id => {
