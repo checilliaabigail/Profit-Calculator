@@ -582,14 +582,8 @@ function hitungGratisOngkirDariJSON() {
 // ============================================================
 function hitungSemua() {
     const hargaJual = getNumber('hargaJual');
-    const diskonToko = getNumber('diskon');
-    const voucherToko = getNumber('voucher');
-    
-    // ============================================================
-    // GABUNGKAN DISKON TOKO & VOUCHER TOKO
-    // ============================================================
-    const totalDiskon = diskonToko + voucherToko;
-    
+    const diskon = getNumber('diskon');
+    const voucher = getNumber('voucher');
     const tipeToko = DOM.tipeTokoSelect.value;
     const promoXTRA = DOM.toggles.promoXTRA.value;
     const promoXTRAplus = DOM.toggles.promoXTRAplus.value;
@@ -613,59 +607,46 @@ function hitungSemua() {
     const gratisOngkirBiasaManual = getNumber('gratisOngkirBiasaManual');
     const gratisOngkirKhususManual = getNumber('gratisOngkirKhususManual');
 
-    // ============================================================
-    // 1. Harga Jual Nett (menggunakan totalDiskon)
-    // ============================================================
-    const hargaNett = hargaJual - totalDiskon;
+    // 1. Harga Jual Nett
+    const hargaNett = hargaJual - diskon - voucher;
     DOM.hargaNett.innerText = formatRupiah(hargaNett);
 
-    // ============================================================
     // 2. Biaya Administrasi
-    // ============================================================
     let biayaAdmin = hitungBiayaAdmin();
     if (isNaN(biayaAdmin)) biayaAdmin = 0;
 
-    // ============================================================
     // 3. Biaya Pembayaran
-    // ============================================================
     let biayaPembayaran = hitungBiayaPembayaran();
     if (isNaN(biayaPembayaran)) biayaPembayaran = 0;
 
-    // ============================================================
     // 4. Biaya Proses Pesanan
-    // ============================================================
     let biayaProses = biayaProsesManual;
 
-    // ============================================================
     // 5. Gratis Ongkir
-    // ============================================================
     let gratisOngkirBiasa = gratisOngkirBiasaManual;
     let gratisOngkirKhusus = gratisOngkirKhususManual;
 
     const ongkirFromJSON = hitungGratisOngkirDariJSON();
 
+    // ⚠️ UPDATE INPUT DENGAN NILAI DARI JSON ⚠️
     if (gratisOngkirBiasa === 0 && ongkirFromJSON.biasa > 0) {
         gratisOngkirBiasa = ongkirFromJSON.biasa;
+        // Isi input dengan nilai yang dihitung
         document.getElementById('gratisOngkirBiasaManual').value = Math.round(gratisOngkirBiasa);
     }
     if (gratisOngkirKhusus === 0 && ongkirFromJSON.khusus > 0) {
         gratisOngkirKhusus = ongkirFromJSON.khusus;
+        // Isi input dengan nilai yang dihitung
         document.getElementById('gratisOngkirKhususManual').value = Math.round(gratisOngkirKhusus);
     }
 
-    // ============================================================
     // 6. Promo XTRA
-    // ============================================================
     let biayaPromoXTRA = hitungPromoXTRA();
 
-    // ============================================================
     // 7. Promo XTRA+
-    // ============================================================
     let biayaPromoXTRAplus = hitungPromoXTRAplus();
 
-    // ============================================================
     // 8. Live XTRA
-    // ============================================================
     let biayaLiveXTRA = 0;
     if (liveXTRA === 'Yes') {
         biayaLiveXTRA = 0.03 * hargaNett;
@@ -675,9 +656,7 @@ function hitungSemua() {
         if (biayaLiveXTRA > MAX_LIVE_XTRA) biayaLiveXTRA = MAX_LIVE_XTRA;
     }
 
-    // ============================================================
     // 9. SPayLater
-    // ============================================================
     let biayaSPayLater = 0;
     if (spayLater === 'Tenor3') {
         biayaSPayLater = 0.025 * hargaNett;
@@ -685,83 +664,57 @@ function hitungSemua() {
         biayaSPayLater = 0.04 * hargaNett;
     }
 
-    // ============================================================
     // 10. Hemat Biaya Kirim
-    // ============================================================
     let biayaHematKirim = (hematKirim === 'Yes') ? 350 : 0;
 
-    // ============================================================
     // 11. Asuransi Pengiriman
-    // ============================================================
     let biayaAsuransi = (asuransi === 'Yes') ? 0.005 * hargaNett : 0;
 
-    // ============================================================
     // 12. Produk PO
-    // ============================================================
     let biayaPO = (produkPO === 'Yes3') ? 0.03 * hargaNett : 0;
 
-    // ============================================================
     // 13. Total Biaya Shopee
-    // ============================================================
     const totalBiayaShopee = biayaAdmin + biayaPembayaran + biayaProses +
         gratisOngkirBiasa + gratisOngkirKhusus +
         biayaPromoXTRA + biayaPromoXTRAplus + biayaLiveXTRA +
         biayaSPayLater + biayaHematKirim + biayaAsuransi + biayaPO;
     DOM.totalBiayaShopee.innerText = formatRupiah(totalBiayaShopee);
 
-    // ============================================================
     // 14. Dana Dicairkan
-    // ============================================================
     const danaDicairkan = hargaNett - totalBiayaShopee;
     DOM.danaDicairkan.innerText = formatRupiah(danaDicairkan);
 
-    // ============================================================
     // 15. COGS
-    // ============================================================
     const totalCOGS = hpp + biayaPenanganan;
     DOM.totalCOGS.innerText = formatRupiah(totalCOGS);
 
-    // ============================================================
     // 16. Profit Kotor
-    // ============================================================
     const profitKotor = danaDicairkan - totalCOGS;
     DOM.profitKotor.innerText = formatRupiah(profitKotor);
 
-    // ============================================================
     // 17. Biaya Iklan dari ROAS
-    // ============================================================
     let biayaIklan = 0;
     if (roas > 0) {
         biayaIklan = (1 / roas) * hargaNett;
     }
 
-    // ============================================================
     // 18. Komisi Afiliasi
-    // ============================================================
     const biayaKomisiAfiliasi = (komisiAfiliasiPersen / 100) * hargaNett;
 
-    // ============================================================
     // 19. Total Pengeluaran
-    // ============================================================
     const totalPengeluaran = biayaIklan + biayaIklanLain + biayaKomisiAfiliasi + promosiLuar +
         biayaPacking + biayaOperasional + biayaLain;
     DOM.totalBiaya.innerText = formatRupiah(totalPengeluaran);
 
-    // ============================================================
     // 20. Profit Sebelum Pajak
-    // ============================================================
     const profitSebelumPajak = profitKotor - totalPengeluaran;
     DOM.profitSebelumPajak.innerText = formatRupiah(profitSebelumPajak);
 
-    // ============================================================
     // 21. Pajak
-    // ============================================================
     const pajak = pajakRate * hargaNett;
     DOM.pajak.innerText = formatRupiah(pajak);
 
-    // ============================================================
     // 22. Profit Bersih
-    // ============================================================
     const profitBersih = profitSebelumPajak - pajak;
     DOM.profitBersih.innerText = formatRupiah(profitBersih);
 
