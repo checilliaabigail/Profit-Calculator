@@ -603,7 +603,8 @@ function hitungSemua() {
     const biayaLain = getNumber('biayaLain');
     const pajakRate = getNumber('pajakRate') / 100;
 
-    const biayaProsesManual = getNumber('biayaProsesManual');
+    const basketSize = getNumber('basketSize');
+    const biayaProses = basketSize > 0 ? Math.round(1250 / basketSize) : 0;
     const gratisOngkirBiasaManual = getNumber('gratisOngkirBiasaManual');
     const gratisOngkirKhususManual = getNumber('gratisOngkirKhususManual');
 
