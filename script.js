@@ -19,6 +19,7 @@ let dataPromoXtra = [];
 let dataXtraFee = [];
 let dataBiayaPembayaran = [];
 let dataLiveXtra = [];
+let dataSPayLater = [];
 let productIndex = [];
 
 // ============================================================
@@ -81,14 +82,15 @@ function cacheDomElements() {
 // ============================================================
 async function loadAllData() {
     try {
-        const [xtraCategory, adminMall, adminNonMall, promoXtra, xtraFee, biayaPembayaran, liveXtra] = await Promise.all([
+        const [xtraCategory, adminMall, adminNonMall, promoXtra, xtraFee, biayaPembayaran, liveXtra, spayLater] = await Promise.all([
             fetch(`${DATA_PATH}xtraCategory.json`).then(r => { if (!r.ok) throw new Error('xtraCategory.json not found'); return r.json(); }),
             fetch(`${DATA_PATH}admin_mall.json`).then(r => { if (!r.ok) throw new Error('admin_mall.json not found'); return r.json(); }),
             fetch(`${DATA_PATH}admin_non-mall.json`).then(r => { if (!r.ok) throw new Error('admin_non-mall.json not found'); return r.json(); }),
             fetch(`${DATA_PATH}promo_xtra.json`).then(r => { if (!r.ok) throw new Error('promo_xtra.json not found'); return r.json(); }),
             fetch(`${DATA_PATH}xtraFee.json`).then(r => { if (!r.ok) throw new Error('xtraFee.json not found'); return r.json(); }),
             fetch(`${DATA_PATH}biaya_pembayaran.json`).then(r => { if (!r.ok) throw new Error('biaya_pembayaran.json not found'); return r.json(); }),
-            fetch(`${DATA_PATH}live_xtra.json`).then(r => { if (!r.ok) throw new Error('live_xtra.json not found'); return r.json(); })
+            fetch(`${DATA_PATH}live_xtra.json`).then(r => { if (!r.ok) throw new Error('live_xtra.json not found'); return r.json(); }),
+            fetch(`${DATA_PATH}spaylater_xtra.json`).then(r => { if (!r.ok) throw new Error('spaylater_xtra.json not found'); return r.json(); })
         ]);
 
         dataXTRACategory = xtraCategory;
@@ -98,6 +100,7 @@ async function loadAllData() {
         dataXtraFee = xtraFee;
         dataBiayaPembayaran = biayaPembayaran;
         dataLiveXtra = liveXtra;
+        dataSPayLater = spayLater;
 
         console.log('✅ Semua data berhasil dimuat!');
         console.log('📊 xtraCategory:', dataXTRACategory.length, 'items');
@@ -107,6 +110,7 @@ async function loadAllData() {
         console.log('📊 xtraFee:', Object.keys(dataXtraFee).length, 'kategori');
         console.log('📊 biaya_pembayaran:', dataBiayaPembayaran.length, 'items');
         console.log('📊 live_xtra:', dataLiveXtra.length, 'items');
+        console.log('📊 spaylater_xtra:', dataSPayLater.length, 'items');
 
         buildProductIndex();
         initApp();
@@ -296,11 +300,12 @@ function resetForm() {
     DOM.toggles.asuransi.value = 'No';
     DOM.toggles.produkPO.value = 'No';
 
-    // Sembunyikan result box promo saat reset
-    const promoXTRABox = document.getElementById('promoXTRABox');
-    const promoXTRAplusBox = document.getElementById('promoXTRAplusBox');
-    if (promoXTRABox) promoXTRABox.style.display = 'none';
-    if (promoXTRAplusBox) promoXTRAplusBox.style.display = 'none';
+    // Sembunyikan semua result box
+    const boxes = ['promoXTRABox', 'promoXTRAplusBox', 'liveXTRABox', 'spayLaterBox'];
+    boxes.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
 
     updateSubKategoriFromJSON();
     console.log('🔄 Form telah direset!');
@@ -432,7 +437,7 @@ function hitungBiayaPembayaran() {
 }
 
 // ============================================================
-// FUNGSI HITUNG PROMO XTRA DARI JSON
+// FUNGSI HITUNG PROMO XTRA
 // ============================================================
 function hitungPromoXTRA() {
     const hargaNett = getNumber('hargaJual') - getNumber('diskon') - getNumber('voucher');
@@ -461,7 +466,7 @@ function hitungPromoXTRAplus() {
 }
 
 // ============================================================
-// FUNGSI HITUNG LIVE XTRA DARI JSON
+// FUNGSI HITUNG LIVE XTRA
 // ============================================================
 function hitungLiveXTRA() {
     const hargaNett = getNumber('hargaJual') - getNumber('diskon') - getNumber('voucher');
@@ -469,16 +474,35 @@ function hitungLiveXTRA() {
     
     if (pilihan === 'No') return 0;
     
-    // Cari data dari live_xtra.json
     const data = dataLiveXtra.find(item => item.fieldName === 'liveXTRA');
     if (!data) return 0;
     
-    // Cari option yang sesuai dengan pilihan user
     const option = data.options.find(opt => opt.value === pilihan);
     if (!option) return 0;
     
     let biaya = hargaNett * option.rate;
     if (biaya > option.maxBiaya) biaya = option.maxBiaya;
+    
+    return biaya;
+}
+
+// ============================================================
+// FUNGSI HITUNG SPAYLATER XTRA
+// ============================================================
+function hitungSPayLater() {
+    const hargaNett = getNumber('hargaJual') - getNumber('diskon') - getNumber('voucher');
+    const pilihan = DOM.toggles.spayLater.value;
+    
+    if (pilihan === 'No') return 0;
+    
+    const data = dataSPayLater.find(item => item.fieldName === 'spayLater');
+    if (!data) return 0;
+    
+    const option = data.options.find(opt => opt.value === pilihan);
+    if (!option) return 0;
+    
+    let biaya = hargaNett * option.rate;
+    // SPayLater tidak memiliki batas maksimal
     
     return biaya;
 }
@@ -622,7 +646,7 @@ function hitungSemua() {
     const basketSize = getNumber('basketSize');
     const biayaProses = basketSize > 0 ? Math.round(1250 / basketSize) : 0;
 
-    // 5. Gratis Ongkir XTRA (hanya salah satu sesuai ukuran barang)
+    // 5. Gratis Ongkir XTRA
     const ongkirFromJSON = hitungGratisOngkirDariJSON();
     const ukuranBarang = document.getElementById('ukuranBarang').value;
     let gratisOngkir = 0;
@@ -655,7 +679,7 @@ function hitungSemua() {
         promoXTRAplusBox.style.display = 'none';
     }
 
-    // 8. Live XTRA (dari JSON)
+    // 8. Live XTRA
     let biayaLiveXTRA = hitungLiveXTRA();
     const liveXTRABox = document.getElementById('liveXTRABox');
     const biayaLiveXTRAText = document.getElementById('biayaLiveXTRAText');
@@ -666,12 +690,15 @@ function hitungSemua() {
         liveXTRABox.style.display = 'none';
     }
 
-    // 9. SPayLater
-    let biayaSPayLater = 0;
-    if (spayLater === 'Tenor3') {
-        biayaSPayLater = 0.025 * hargaNett;
-    } else if (spayLater === 'Tenor6') {
-        biayaSPayLater = 0.04 * hargaNett;
+    // 9. SPayLater XTRA
+    let biayaSPayLater = hitungSPayLater();
+    const spayLaterBox = document.getElementById('spayLaterBox');
+    const biayaSPayLaterText = document.getElementById('biayaSPayLaterText');
+    if (spayLater !== 'No') {
+        spayLaterBox.style.display = 'flex';
+        biayaSPayLaterText.innerText = formatRupiah(biayaSPayLater);
+    } else {
+        spayLaterBox.style.display = 'none';
     }
 
     // 10. Hemat Biaya Kirim
@@ -686,8 +713,8 @@ function hitungSemua() {
     // 13. Total Biaya Shopee
     const totalBiayaShopee = biayaAdmin + biayaPembayaran + biayaProses +
         gratisOngkir +
-        biayaPromoXTRA + biayaPromoXTRAplus + biayaLiveXTRA +
-        biayaSPayLater + biayaHematKirim + biayaAsuransi + biayaPO;
+        biayaPromoXTRA + biayaPromoXTRAplus + biayaLiveXTRA + biayaSPayLater +
+        biayaHematKirim + biayaAsuransi + biayaPO;
     DOM.totalBiayaShopee.innerText = formatRupiah(totalBiayaShopee);
 
     // 14. Dana Dicairkan
@@ -809,7 +836,6 @@ function attachEventListeners() {
         }
     });
 
-    // Listener untuk ukuran barang
     const ukuranBarangEl = document.getElementById('ukuranBarang');
     if (ukuranBarangEl) ukuranBarangEl.addEventListener('change', hitungSemua);
 
