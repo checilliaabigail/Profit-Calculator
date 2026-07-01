@@ -83,6 +83,7 @@
             <p>Cuan Berkah Digital | Private Coaching • Ads Management • Affiliator Agency</p>
         </div>
 
+        <!-- CARD 1: HARGA JUAL -->
         <div class="card">
             <div class="card-title"><span>📦</span> HARGA JUAL</div>
             <div class="form-group">
@@ -119,6 +120,7 @@
             </div>
         </div>
 
+        <!-- CARD 2: BIAYA SHOPEE -->
         <div class="card">
             <div class="card-title"><span>🏪</span> BIAYA SHOPEE</div>
 
@@ -181,8 +183,8 @@
             <div class="form-group">
                 <label>Rata-rata Produk per Pesanan (pcs)</label>
                 <div class="input-group">
-                    <input type="number" id="basketSize" value="" step="1" min="1" 
-                        placeholder="Contoh: 3" 
+                    <input type="number" id="basketSize" value="" step="1" min="1"
+                        placeholder="Contoh: 3"
                         style="border-radius: 10px 0 0 10px; border-right: none;">
                     <span style="border-radius: 0 10px 10px 0; border-left: none;
                         min-width: 50px; background: #f7fafc; padding: 12px;
@@ -198,8 +200,8 @@
                     <option value="khusus">Ukuran Khusus / Besar (sisi terpanjang > 40 cm)</option>
                 </select>
                 <div class="info-text">
-                        Ukuran biasa: panjang + lebar + tinggi ≤ 100 cm. 
-                        Ukuran khusus: salah satu sisi > 40 cm atau total > 100 cm.
+                    Ukuran biasa: panjang + lebar + tinggi ≤ 100 cm.
+                    Ukuran khusus: salah satu sisi > 40 cm atau total > 100 cm.
                 </div>
             </div>
 
@@ -207,7 +209,7 @@
                 <span class="result-label">📦 Gratis Ongkir XTRA</span>
                 <span class="result-value" id="gratisOngkirXtraText">Rp 0</span>
             </div>
-            
+
             <div class="separator"></div>
 
             <div class="toggle-group">
@@ -234,6 +236,17 @@
                     </select>
                 </div>
             </div>
+
+            <!-- Result box Promo XTRA & XTRA+ (muncul hanya saat Ya) -->
+            <div id="promoXTRABox" class="result-box" style="background: #fef3c7; display: none;">
+                <span class="result-label">🎯 Biaya Promo XTRA (4,5%)</span>
+                <span class="result-value" id="biayaPromoXTRAText">Rp 0</span>
+            </div>
+            <div id="promoXTRAplusBox" class="result-box" style="background: #fef3c7; display: none;">
+                <span class="result-label">🎯 Biaya Promo XTRA+ (6,5%)</span>
+                <span class="result-value" id="biayaPromoXTRAplusText">Rp 0</span>
+            </div>
+
             <div class="toggle-group">
                 <div class="toggle-item">
                     <label>SPayLater XTRA 0%</label>
@@ -273,6 +286,7 @@
             </div>
         </div>
 
+        <!-- CARD 3: DANA DICAIRKAN -->
         <div class="card">
             <div class="card-title"><span>💰</span> DANA YANG DICAIRKAN</div>
             <div class="result-box" style="background: #d1fae5;">
@@ -281,6 +295,7 @@
             </div>
         </div>
 
+        <!-- CARD 4: COGS -->
         <div class="card">
             <div class="card-title"><span>📦</span> COGS (Modal)</div>
             <div class="row-2">
@@ -312,6 +327,7 @@
             </div>
         </div>
 
+        <!-- CARD 5: PENGELUARAN -->
         <div class="card">
             <div class="card-title"><span>💸</span> PENGELUARAN</div>
             <div class="row-2">
@@ -374,6 +390,7 @@
             </div>
         </div>
 
+        <!-- CARD 6: HASIL AKHIR -->
         <div class="card">
             <div class="card-title"><span>📊</span> HASIL AKHIR</div>
             <div class="result-box" style="background: #e0e7ff;">
